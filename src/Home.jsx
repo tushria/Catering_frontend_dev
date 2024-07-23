@@ -1,6 +1,9 @@
 import React from 'react'
-
+import ReactDom from 'react-dom';
+import { Link } from 'react-router-dom'
+import './style.css';
 const Home = () => {
+  
   return (
     <div>
       <div className='inner-box1'>
@@ -14,7 +17,9 @@ const Home = () => {
                             <li>ABOUT</li>
                             <li>CONTACT</li>
                         </ul>
+                        
                     </div>
+                    
               {/* second section */}
               <div className="main-cont">
               <div className="left-sec">
@@ -23,15 +28,14 @@ const Home = () => {
                   <h1 id="tag-line">Where flavors meet and mingle</h1>
                 </div>
                 <div className="click-me">
-                  <button>View Menu</button>
+                  <Link to= '/ContactUs'>
+                  <button>Contact Us</button>
+                  </Link>
                 </div>
                 <h3>Welcome to MasalaMingle, a food catering company in India. We <br /> provide event catering service across India</h3>
               </div>
               </div>
-              <section className=''>
-                <div className='heading'>
-                  <h1>Let's have a MasalaMingle</h1>
-                </div>
+              <section className='second-sec'>
                 <div className=''></div>
               </section>
             </section>
@@ -40,4 +44,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Home;

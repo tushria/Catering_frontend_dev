@@ -1,0 +1,22 @@
+.slider{
+    width: 100%;
+  
+}
+.slider-img{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.btn{
+    position: absolute;
+    text-align: center;
+    display: flex;
+    gap: 20px;
+}
+.btn button{
+    background-color: transparent;
+    border-style:none;
+}
+.hidden{
+    display: none;
+}
