@@ -1,51 +1,52 @@
-import React,{useEffect,useState} from 'react'
-import "./Slider.css"
-import drinks from "../assest/drinks.jpg"
-import starters from "../assest/starters.jpg"
-import starter2 from "../assest/starter2.jpg" 
-import weddingfood from "../assest/weddingfood.jpg"
-import food from "../assest/food.jpg"
+import React from 'react';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
+import 'swiper/css/autoplay';
+import './Slider.css';
+
+import { EffectCoverflow, Pagination, Autoplay } from 'swiper/modules';
+
+import gulab_jamun from "../assest/gulab_jamun.jpg";
+import starters from "../assest/starters.jpg";
+import starter2 from "../assest/starter2.jpg"; 
+import weddingfood from "../assest/weddingfood.jpg";
+import food from "../assest/food.jpg";
+import food2 from "../assest/food2.jpg";
+import food1 from "../assest/food1.jpg";
 
 
+export default function App() {
+  const images = [starters, gulab_jamun, starter2,food1,weddingfood, food, food2];
 
-const Slider = () => {
-
-    const [slider,SetSlider]=useState(0)
-    const imgdata=[drinks,starters,starter2,weddingfood,food]
-    const HandlePlus =()=>{
-        SetSlider(slider === imgdata.length-1? 0:slider+1)
-    }
-    const HandleMinus =()=>{
-        SetSlider(slider === 0? imgdata.length-1:slider-1)
-    }
-
-    useEffect(()=>{
-        const sliderclear = setInterval(()=>{
-            HandlePlus()
-        },2000)
-        return()=>clearInterval(sliderclear)
-    },[slider])
   return (
-    <div className='slider'>
-       {
-            imgdata.map((img,i)=>(
-                <div className={`slider-img ${slider === i? "block":"hidden"}`} key={i}>
-                    <img src={img} alt='' style={{width:"60%", height:"70%"}} />
-                <div className='btn'>
-                    <button onClick={HandleMinus}><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={24} height={24} color={"#ffffff"} fill={"none"}>
-    <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="1.5" />
-    <path d="M13.5 16C13.5 16 10.5 13.054 10.5 12C10.5 10.9459 13.5 8 13.5 8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-</svg></button>
-                    <button onClick={HandlePlus}><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={24} height={24} color={"#ffffff"} fill={"none"}>
-    <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="1.5" />
-    <path d="M10.5 8C10.5 8 13.5 10.946 13.5 12C13.5 13.0541 10.5 16 10.5 16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-</svg></button>
-                </div>
-                </div>
-            ))
-      } 
-    </div>
-  )
+    <Swiper
+      effect={'coverflow'}
+      grabCursor={true}
+      centeredSlides={true}
+      slidesPerView={'auto'}
+      coverflowEffect={{
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      }}
+      pagination={{ clickable: true }}
+      autoplay={{
+        delay: 3500,
+        disableOnInteraction: false,
+      }}
+      modules={[EffectCoverflow, Pagination, Autoplay]}
+      className="mySwiper"
+    >
+      {images.map((img, index) => (
+        <SwiperSlide key={index}>
+          <img src={img} alt={`Slide ${index}`} />
+        </SwiperSlide>
+      ))}
+    </Swiper>
+  );
 }
-
-export default Slider

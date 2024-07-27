@@ -111,10 +111,20 @@ form input{
 }
 
 /* home page */
+.main-body{
+    background-color: rgb(46, 46, 46); 
+    width: 100%;
+    height: 100%;
+    position: relative; 
+    /* overflow: hidden; */
+    /* padding: 50px; */
+}
 .inner-box1{
     background-image: url('../src/assest/homepage.jpg');
+    position: relative;
+    background-color: rgb(46, 46, 46);
     background-size: cover;
-    height: 100vh;
+    height: 100%;
     padding: 50px;
 }
 .blured-box{
@@ -167,6 +177,29 @@ form input{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.second-sec{
+    /* background-color: pink; */
+    margin-top: 10%;
+}
+.second-sec h1{
+    text-align: center;
+    font-size: 3.5rem;
+    font-family: "Dancing Script", cursive;
+    padding: 2% 10%;
+
+}
+
+.fourth-sec h1{
+    text-align: center;
+    font-size: 3.5rem;
+    font-family: "Dancing Script", cursive;
+    padding: 5% 10%;
+}
+
+.third img{
+    width: 50%;
+    height: 65%;
+}
 /* starting the css for ContactUs page */
 .cont-main-box{
     background-color: rgba(52, 86, 86);
@@ -280,6 +313,210 @@ form input{
 .cont-lbl7{
     padding: 20px 5px;
 }
+
+
+/* third section of the home page */
+.third-sec{
+    margin-top: 10%;
+    width: 100%;
+    padding-bottom: 5%;
+}
+.text-box{
+    width: 100%;
+    padding: 1%;
+}
+.third-sec h1{
+    text-align: center;
+    font-size: 3.5rem;
+    font-family: "Dancing Script", cursive;
+}
+.fourth-detail {
+    font-size: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 1rem;
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box; 
+    margin: 0 auto;
+    text-align: center; 
+}
+
+
+/* birthday page */
+.b-details{
+    padding: 1% 5%;
+}
+.b-heading {
+    position: relative;
+    width: 100%;
+    height: 3%;
+    text-align: center;
+}
+.b-heading h1 {
+    font-size: 3rem;
+    font-family: "Dancing Script", cursive;
+    width: 100%;
+    height: 3%;
+    text-align: center;
+    padding-bottom: 5%; 
+}
+
+
+.b-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 2%;
+    gap: 2%;
+    background-color: rgba(255, 192, 203, 0.651);
+    padding-bottom: 5%;
+  }
+  
+ 
+.birthday-cont h1{
+    font-size: 4rem;
+}
+
+.b-img img{
+    width: 70%;
+    height: 90%;
+    border: 10px solid white;
+    margin-left: 15%;
+    box-shadow: rgba(0, 0, 0, 0.457);
+}
+.birthday-cont{
+    width: 100%;
+    height: 30%;
+    font-size: 1.3rem;
+    letter-spacing: 0.1rem;
+    line-height: 2;
+}
+
+/*CSS for the service section of Birthday page */
+.food-details{
+    width: 100%;
+    height: 100%;
+    padding-top:5%;
+    padding-bottom: 5%;
+}
+.food-details h1{
+    text-align: center;
+    padding: 2% 8%;
+    font-size: 3rem;
+    font-family: "Dancing Script", cursive;
+}
+.food{
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    width: 100%;
+    height: 50vh;
+    background-color: white;
+    border-radius: 20px;
+    padding-inline: 10px;
+}
+.food h4{
+    text-align: center;
+}
+.food .one{
+    font-weight: 300;
+}
+.food-img:hover{
+    background-color: rgba(0, 0, 0, 0.231);
+    border-radius: 20px;
+ 
+    
+}
+.food-img1:hover{
+    background-color: rgba(0, 0, 0, 0.231);
+    border-radius: 20px;
+}
+.food-img3:hover{
+    background-color: rgba(0, 0, 0, 0.231);
+    border-radius: 20px;
+}
+.food img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 95%;
+    height: 100%;
+    padding: 3%;
+    object-fit: contain;
+    border-radius: 20px;
+}
+.food-img img{
+    height: auto;
+    object-fit: cover; 
+    max-width: 300px; 
+    max-height: 300px;
+} 
+.food-img3 img{
+    height: auto;
+  object-fit: cover; 
+  max-width: 300px; 
+  max-height: 300px;
+}
+.food-img1 img{
+    height: auto; 
+    max-width: 300px; 
+    max-height: 300px;
+    object-fit: cover; 
+}
+.food-img3{
+   
+    height: auto;
+    overflow: hidden;
+}
+
+
+
+.services{
+    height: 100%;
+    margin: 1% 0%;
+    background-color: rgba(0, 0, 0, 0.425);
+    border-style: dashed;
+    border-color: black;
+    color: white;
+}
+.services svg{
+    color: white;
+}
+.services h1{
+    padding: 2% 5%;
+}
+.service h3{
+    font-weight: 400;
+    padding-left: 3%;
+}
+
+.services:hover{
+    background-color: rgba(0, 0, 0, 0.356);
+}
+
+.chef{
+    padding: 1% 5%;
+    display: flex;
+    align-items: center;  
+      
+}
+
+.cheffood{
+    padding: 1% 5%;
+    display:flex;
+    align-items: center;    
+}
+.chefclean{
+    padding: 1% 5%;
+    display: flex;
+    align-items: center;        
+}
+
+
+
+
+
+
 
 /* media queries */
 
