@@ -7,7 +7,6 @@ import Birthday from './Birthday';
 import Wedding from './Wedding';
 import Menu from './Menu';
 import AddtoCart from './AddtoCart';
-
 import Cart from "./Component/Cart";
 import Context from './Context/Context';
 

@@ -4,9 +4,7 @@ import 'swiper/css';
 import 'swiper/css/effect-cube';
 import 'swiper/css/pagination';
 import './SwiperCube.css';
-
 import {EffectCube, Pagination} from 'swiper/modules';
-
 import birthdayImage from '../asset/birthday.jpg';
 export default function App() {
   const images = [birthdayImage,birthdayImage,birthdayImage,birthdayImage];

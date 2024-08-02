@@ -4,7 +4,7 @@ import indiandishes from './assest/file.png';
 import Mitems from './Component/Mitems';
 import Header from './Component/Header';
 const Menu = () => {
-  return (
+return (
     <div>
       <div className='main-body'>
       <div className='inner-box1'>

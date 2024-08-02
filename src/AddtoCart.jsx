@@ -23,10 +23,10 @@ const AddtoCart = () => {
     productDispatch,
   } = CartState();
 
-  return (
+return (
     <div>
-        <div className='main-body'>
-      <div className='inner-box1'>
+      <div className='main-body'>
+        <div className='inner-box1'>
             <section className='blured-box'>
                 <div className="logo"></div>
                     <Header/>

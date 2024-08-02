@@ -22,7 +22,6 @@ const Wedding = () => {
                 <img src={weddish} alt="wedding" />
             </div>
             <div className='birthday-cont'>
-                
                 <p>Looking for catering services near you? Hire us for your 
                     wedding celebration and enjoy an exquisite range of delicious 
                     veg and non-veg dishes, delivered fresh and right to your venue. 
@@ -97,5 +96,4 @@ const Wedding = () => {
 </div>
   )
 }
-
 export default Wedding

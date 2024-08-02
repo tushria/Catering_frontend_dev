@@ -26,7 +26,6 @@ code {
     font-size: 6rem;
   }
 }
-
 @media(max-width:800px){
   #web-name{
     font-size: 3.8rem;

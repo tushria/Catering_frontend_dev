@@ -1,15 +1,3 @@
-
-// import React from 'react'
-
-// const navbar = () => {
-//   return (
-//     <div>
-//       this is navbar
-//     </div>
-//   )
-// }
-
-// export default navbar
 import React from "react";
 import { Link } from "react-router-dom";
 import './Navbar.css';

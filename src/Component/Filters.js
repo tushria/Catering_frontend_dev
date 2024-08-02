@@ -2,7 +2,6 @@ import {Button, Form} from "react-bootstrap";
 import { CartState} from "../Context/Context";
 const Filters =() => {
     const{productState: {fastDelivery,sort},productDispatch}= CartState();
-
     return(
         <div className="filter">
             <span className="title">Filter Products</span>

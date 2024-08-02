@@ -7,7 +7,7 @@ import indoorCatering from './assest/indoor_catering.png';
 import outdoorCatering from './assest/outdoor_catering.png';
 import homeCatering from './assest/home_catering.png';
 const Birthday = () => {
-  return (
+return (
     <div>
         <div className='main'>
             <div className='inner-box1'>

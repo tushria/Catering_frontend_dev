@@ -12,6 +12,7 @@
     /* z-index:2; */
     position: sticky;
 }
+
 .nav-bar ul{
     list-style-type: none;
     display: flex;

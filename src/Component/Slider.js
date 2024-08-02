@@ -1,14 +1,11 @@
 import React from 'react';
-
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 import './Slider.css';
-
 import { EffectCoverflow, Pagination, Autoplay } from 'swiper/modules';
-
 import gulab_jamun from "../assest/gulab_jamun.jpg";
 import starters from "../assest/starters.jpg";
 import starter2 from "../assest/starter2.jpg"; 

@@ -38,7 +38,6 @@ const Mitems = () => {
       <img src={Rfood}  alt={Rfood}/>
       <h2>Dal Bati Churma</h2>
       <h6><span className='h-light'> Description:</span> A combination of spicy lentils, baked bread, and sweet crushed wheat</h6>
-
       <a href='/addtocart' className='styling'>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={24} height={24} color={"#000000"} fill={"none"}>
                 <path d="M8 16H15.2632C19.7508 16 20.4333 13.1808 21.261 9.06908C21.4998 7.88311 21.6192 7.29013 21.3321 6.89507C21.045 6.5 20.4947 6.5 19.3941 6.5H19M6 6.5H8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
