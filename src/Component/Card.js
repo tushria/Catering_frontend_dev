@@ -24,7 +24,7 @@ const Card = () => {
       <div className='card1-of-card-comp'>
       <img src={cateringImage2}  alt={cateringImage}/>
       <h2>Meetings</h2>
-      {/* <a href='' className='styling-of-card-comp'>Check out!</a> */}
+      <a href='/Meeting' className='styling-of-card-comp'>Check out!</a>
       </div>
     </div>
     

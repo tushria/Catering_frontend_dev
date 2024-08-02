@@ -52,7 +52,7 @@ const Home = () => {
                 </div>
               <section className='second-sec'>
                 <h1>~ Special Occassions ~</h1>
-                <Card /> 
+                <Card/> 
               </section>
               <section className='third-sec'>
                 <div className='text-box'>

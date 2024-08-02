@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import indiandishes from './assest/file.png';
 import Mitems from './Component/Mitems';
 import Header from './Component/Header';

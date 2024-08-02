@@ -5,6 +5,7 @@ import SignUpForm from './SignUpForm';
 import ContactUs from './ContactUs';
 import Birthday from './Birthday';
 import Wedding from './Wedding';
+import Meeting from './Meeting';
 import Menu from './Menu';
 import AddtoCart from './AddtoCart';
 import Cart from "./Component/Cart";
@@ -26,6 +27,7 @@ function App() {
       <Route path='/addtocart' element={<AddtoCart/>}/>
       <Route path='/birthday' element={<Birthday />}/>
       <Route path='/wedding' element={<Wedding/>}/>
+      <Route path='/meeting' element={<Meeting/>}/>
       <Route path='/signup' element={<SignUpForm/>}/>
       <Route path='/login' element={<LoginForm/>}/>
       <Route path='/cart' element={<Cart/>} />

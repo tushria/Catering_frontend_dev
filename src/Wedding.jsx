@@ -96,4 +96,4 @@ const Wedding = () => {
 </div>
   )
 }
-export default Wedding
+export default Wedding;
