@@ -21,12 +21,12 @@ const LoginForm = () => {
     <div className='login-container'>
         <form className='login-form' onSubmit={handleSubmit}>
         <h2>Login</h2>
-        <label htmlFor="email">Email:</label>
+        {/* <label htmlFor="email">Email:</label> */}
         <input type="email" placeholder='example.123@gmail.com' onChange={(e) => setEmail(e.target.value)}/>
-        <label htmlFor="password">Password:</label>
+        {/* <label htmlFor="password">Password:</label> */}
         <input type="password" placeholder='security_key' onChange={(e) => setPassword(e.target.value)}/>
         <button type='submit'>Login</button>
-        <p>Don't have an account? <Link to={'/signup'}>Sign up</Link></p>
+        <p>Don't have an account?👉 <Link to={'/signup'} className='link-des'>Sign up</Link></p>
 
       </form>
     </div>

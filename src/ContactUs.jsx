@@ -1,20 +1,15 @@
 import React from 'react'
-// import Slider from './Component/Slider';
+import Header from './Component/Header';
 import './style.css'; 
+import { Link } from 'react-router-dom';
 const ContactUs = () => {
   return (
     <div>
         <div className='cont-main-box'>
-      <section className='blured-box'>
-        <div className="nav-bar">
-                        <ul className="menu">
-                            <li>HOME</li>
-                            <li>MENU</li>
-                            <li>EVENT</li>
-                            <li>ABOUT</li>
-                            <li>CONTACT</li>
-                        </ul>
-                    </div>
+                <section className='blured-box'>
+                    
+                    <Header/>
+                    
         <div className="inner-blurred-contactus-box">
 
         <div className="box2-side">

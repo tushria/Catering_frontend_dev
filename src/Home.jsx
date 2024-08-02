@@ -4,12 +4,14 @@ import { Link } from 'react-router-dom'
 import './style.css';
 import Card from './Component/Card';
 import Slider from './Component/Slider';
-
+import Header from './Component/Header';
 import hotfresh from './assest/hotAndfresh.png';
 import quantity from './assest/quantity.png';
 import recipe from './assest/recipe.png';
 import relax from './assest/relax.png';
 import rupee from './assest/Rupee.png';
+// import circlebg from './assest/cheff.png';
+
 
 const Home = () => {
   
@@ -19,15 +21,7 @@ const Home = () => {
       <div className='inner-box1'>
             <section className='blured-box'>
                 <div className="logo"></div>
-                    <div className="nav-bar">
-                        <ul className="menu">
-                            <li>HOME</li>
-                            <li>MENU</li>
-                            <li>EVENT</li>
-                            <li>ABOUT</li>
-                            <li>CONTACT</li>
-                        </ul>
-                    </div>
+                  <Header/>
                     
               {/* second section */}
               <div className="main-cont">
@@ -36,16 +30,28 @@ const Home = () => {
                   <h1 id="web-name">MasalaMingle</h1>
                   <h1 id="tag-line">Where flavors meet and mingle</h1>
                 </div>
-                <div className="click-me">
+                <div className="buttons-container">
                   <Link to= '/ContactUs'>
-                  <button>Contact Us</button>
+                  <button className="button-arounder">Contact Us</button>
                   </Link>
                 </div>
-                <h3>Welcome to MasalaMingle, a food catering company in India. We <br /> provide event catering service across India</h3>
               </div>
+              
+              {/* <div className='right-sec'>
+                <img src={circlebg} alt={circlebg} className='img1'  />
+                  <div className='right-img'>
+                    <img src={circlebg} alt={circlebg} className='img2' />
+                  </div>
+              </div> */}
               </div>
+                <div className="marquee-container">
+                  <div className="marquee-content">
+                      <span>Welcome to MasalaMingle, a food catering company in India. We provide event catering service across India.❤️🤍🩵</span>
+                     
+                  </div>
+                </div>
               <section className='second-sec'>
-                <h1>Special Occassions</h1>
+                <h1>~ Special Occassions ~</h1>
                 <Card /> 
               </section>
               <section className='third-sec'>
@@ -83,9 +89,9 @@ const Home = () => {
                 <img src={hotfresh} alt={hotfresh} />
                 <h2>Home Comfort</h2>
                 </div>
-             
               </div>
               </section>
+
             </section>
         </div>
         </div>

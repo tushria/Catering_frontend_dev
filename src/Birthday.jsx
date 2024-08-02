@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.css';
-
+import Header from './Component/Header';
 import { Link } from 'react-router-dom'
 import h_birthday from "./assest/h_birthday.jpg";
 import indoorCatering from './assest/indoor_catering.png';
@@ -10,18 +10,10 @@ const Birthday = () => {
   return (
     <div>
         <div className='main'>
-      <div className='inner-box1'>
-        <div className='blured-box'>
-            <div className="nav-bar">
-                        <ul className="menu">
-                            <li>HOME</li>
-                            <li>MENU</li>
-                            <li>EVENT</li>
-                            <li>ABOUT</li>
-                            <li>CONTACT</li>
-                        </ul>
-                    </div>
-            <section className='b-details'>
+            <div className='inner-box1'>
+                <div className='blured-box'>
+                <Header/>
+                <section className='b-details'>
                 <div className='b-heading'>
                     <h1>~ Birthday Corner ~</h1>
                 </div>
@@ -33,28 +25,28 @@ const Birthday = () => {
                     
                     <p>Looking for catering services near you? Hire for 
                         your birthday or house parties and enjoy a wide range of delicious veg and non-veg food delivered right to your doorstep.</p>
-                        <div className="click-me">
-                  <Link to= '/ContactUs'>
-                  <button>Contact Us</button>
-                  </Link>
-                </div>
+                        <div className="click-me-b">
+                            <Link to= '/ContactUs'>
+                                <button>Contact Us</button>
+                            </Link>
+                        </div>
                 </div>
                 </div>
                 <div className='food-details'>
                     <h1>~ Services ~</h1>
-                    <div className='food'>
-                    <div className='food-img'>
-                        <img src={indoorCatering} alt={indoorCatering} />
+                    <div className='food-b'>
+                    <div className='food-img-b'>
+                        <img src={indoorCatering} alt={indoorCatering} className='food_of_o                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    c' />
                         <h4>Indoor Services</h4>
                         <h4 className='one'>Starts ₹ 249 per person</h4>
                     </div>
-                    <div className='food-img1'>
-                        <img src={outdoorCatering} alt={outdoorCatering} />
+                    <div className='food-img1-b'>
+                        <img src={outdoorCatering} alt={outdoorCatering}  className='food_of_oc'/>
                         <h4>Outdoor Services</h4>
                         <h4 className='one'>Starts ₹ 249 per person</h4>
                     </div>
-                    <div className='food-img3'>
-                        <img src={homeCatering} alt={homeCatering} />
+                    <div className='food-img3-b'>
+                        <img src={homeCatering} alt={homeCatering}  className='food_of_oc'/>
                         <h4>Home services</h4>
                         <h4 className='one'>Starts ₹ 249 per person</h4>
                     </div>
@@ -63,8 +55,7 @@ const Birthday = () => {
 
                 <div className='services'>
                     <h1>How It Works?</h1>
-
-                    <div className='service'>
+                                                                                                                                                                                                                                                                           
                     <div className='chef'>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={44} height={44} color={"#000000"} fill={"none"}>
                     <path d="M15.3979 4.40951C15.9703 4.02542 16.659 3.80138 17.4 3.80138C19.3882 3.80138 21 5.4144 21 7.40415C21 9.31828 19.5084 10.8838 17.625 11H17M15.3979 4.40951C14.9058 3.0062 13.5703 2 12 2C10.4297 2 9.09418 3.0062 8.60215 4.40951M15.3979 4.40951C15.5288 4.78297 15.6 5.18455 15.6 5.60277C15.6 5.91378 15.5606 6.21558 15.4866 6.50346M9.71838 5.60277C9.44207 5.12473 9.05914 4.71612 8.60215 4.40951M8.60215 4.40951C8.02968 4.02543 7.34099 3.80138 6.6 3.80138C4.61177 3.80138 3 5.4144 3 7.40415C3 9.31828 4.49159 10.8838 6.375 11H7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -92,16 +83,12 @@ const Birthday = () => {
                     </svg>
                     <h3>Cleans Kitchen after the services and leaves</h3>
                     </div>
-                    </div>
                 </div>
-
-                
             </section>
         </div>
         </div>
-      </div>
     </div>
-  )
-}
-
-export default Birthday
+    </div>
+  );
+};
+export default Birthday;

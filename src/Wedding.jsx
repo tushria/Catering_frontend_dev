@@ -4,22 +4,15 @@ import weddish from './assest/wedding_dish.jpg';
 import { Link } from 'react-router-dom'
 import wedimg1 from './assest/wed-img1.jpg';
 import wedimg2 from './assest/wed-img2.jpg';
-import wedimg3 from './assest/destinationwed.jpg'
+import wedimg3 from './assest/destinationwed.jpg';
+import Header from './Component/Header';
 const Wedding = () => {
   return (
     <div>
     <div className='main'>
   <div className='inner-box1'>
     <div className='blured-box'>
-        <div className="nav-bar">
-                    <ul className="menu">
-                        <li>HOME</li>
-                        <li>MENU</li>
-                        <li>EVENT</li>
-                        <li>ABOUT</li>
-                        <li>CONTACT</li>
-                    </ul>
-                </div>
+        <Header/>
         <section className='b-details'>
             <div className='b-heading'>
                 <h1>~ Wedding ~</h1>
@@ -34,7 +27,7 @@ const Wedding = () => {
                     wedding celebration and enjoy an exquisite range of delicious 
                     veg and non-veg dishes, delivered fresh and right to your venue. 
                     Make your special day even more memorable with our top-notch catering services.</p>
-            <div className="click-me">
+            <div className="click-me-w">
               <Link to= '/ContactUs'>
               <button>Contact Us</button>
               </Link>
@@ -45,17 +38,17 @@ const Wedding = () => {
                 <h1>~ Services ~</h1>
                 <div className='food'>
                 <div className='food-img'>
-                    <img src={wedimg1} alt={wedimg1} />
+                    <img src={wedimg1} alt={wedimg1}className='image-of-wed' />
                     <h4>Indoor Services</h4>
                     <h4 className='one'>Starts ₹ 349 per person</h4>
                 </div>
                 <div className='food-img1'>
-                    <img src={wedimg2} alt={wedimg2} />
+                    <img src={wedimg2} alt={wedimg2} className='image-of-wed'/>
                     <h4>Outdoor Services</h4>
                     <h4 className='one'>Starts ₹ 349 per person</h4>
                 </div>
                 <div className='food-img3'>
-                    <img src={wedimg3} alt={wedimg3} />
+                    <img src={wedimg3} alt={wedimg3} className='image-of-wed'/>
                     <h4>Destination wedding</h4>
                     <h4 className='one'>Starts ₹ 500 per person</h4>
                 </div>

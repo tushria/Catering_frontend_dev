@@ -26,33 +26,40 @@ p{
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color:rgb(88, 88, 242)
+    background-image: url('../src/assest/homebg.jpg');
 }
 .signup-form {
     background: rgba(255, 255, 255, 0.2);
     padding: 30px;
+    color: whitesmoke;
     border-radius: 21px;
     box-shadow: 0 0 10px black;
     display: flex;
     flex-direction: column;
-    height: 60%;
+    height: 70%;
     width: 50%;
 }
 .signup-form button{
     background-color: rgb(89, 186, 247);
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 8px 20px;
     border-radius: 4px;
     cursor: pointer;
-
     font-size: 16px;
 }
 .sign-form button:hover{
-    background-color: rgb(89, 186, 247);
+    background-color: rgb(0, 0, 0);
+    border-radius: 30px;
+    border-color: none;
+    padding: 8px 20px;
 }
 form placeholder{
     color: black;
+}
+.signup-form input,placeholder{
+    border-bottom: 1px solid rgb(255, 255, 255);
+    outline:none;
 }
 form input{
     background-color: transparent;
@@ -74,7 +81,7 @@ p{
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color:rgb(88, 88, 242)
+    background-image: url('../src/assest/homebg.jpg');
 }
 .login-form {
     background: rgba(255, 255, 255, 0.2);
@@ -83,31 +90,45 @@ p{
     box-shadow: 0 0 10px black;
     display: flex;
     flex-direction: column;
-    height: 60%;
+    height: 70%;
+    color: whitesmoke;
     width: 50%;
 }
 .login-form button{
     background-color: rgb(89, 186, 247);
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 8px 20px;
     border-radius: 4px;
     cursor: pointer;
-
     font-size: 16px;
 }
 .login-form button:hover{
-    background-color: rgb(89, 186, 247);
+    background-color: rgb(0, 0, 0);
+    border-radius: 30px;
+    border-color: none;
+    padding: 8px 20px;
 }
 form placeholder{
-    color: black;
+    color: rgb(167, 167, 167);
+    border: none;
 }
+.login-form input,placeholder{
+    border-bottom: 1px solid rgb(255, 255, 255);
+    outline:none;
+}
+
 form input{
     background-color: transparent;
     border-bottom: 1px solid rgb(0, 0, 0);
     border: none;
     padding: 10px;
+    border-bottom: 1px solid white;
     margin: 15px 10px;
+}
+.link-des{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
 }
 
 /* home page */
@@ -116,69 +137,133 @@ form input{
     width: 100%;
     height: 100%;
     position: relative; 
-    /* overflow: hidden; */
-    /* padding: 50px; */
 }
 .inner-box1{
-    background-image: url('../src/assest/homepage.jpg');
+    background-image: url('../src/assest/homebg.jpg');
     position: relative;
-    background-color: rgb(46, 46, 46);
+    background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
     padding: 50px;
 }
 .blured-box{
-    background: rgba(255, 255, 255, 0.614);
+    background: rgba(255, 255, 255, 0.331);
     padding: 20px;
     border-radius: 10px;
     height: auto;
-    width: 70rem;
-}
-.nav-bar{
-    padding-bottom: 5%;
-    display: flex;
-    padding-left: 50px;
-    justify-content: flex-end;
-}
-.nav-bar ul{
-    list-style-type: none;
-    display: flex;
-    text-align: end;
-    justify-content: flex-end;
-}
-.nav-bar ul li{
-    padding: 5px 30px;
-    font-weight: 700;
+    /* width: 70rem; */
+    /* changed */
+    max-width: 70rem;
+    margin: auto;
+    box-sizing: border-box;
 }
 
-.main-cont{
+
+.main-cont {
     display: flex;
-    justify-content: center;
+    margin: 0% 5%;
+    /* justify-content: center; */
     align-items: center;
-    text-align: center;
+    text-align: left;
+    color: whitesmoke;
 }
 .left-main{
-    line-height: 1.2;
+    line-height: 1;
 }
 .left-main h1{
-    font-size: 28px;
+    font-size: 2rem;
 }
+.img2 {
+    position: relative; /* Set the container to relative position */
+    width: 500px; /* Set desired width */
+    height: 300px; /* Set desired height */
+}
+
+/* .right-sec {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; 
+}
+
+.right-img {
+    position: absolute;
+    top: 50px; 
+    left: 50px;
+    width: 200px; 
+    height: auto; 
+    z-index: 2; 
+} */
+
 
 .click-me{
     margin: 25px 10px 25px 10px;
     padding: 20px;
 }
 
-.click-me button{
-    padding: 15px 56px;
-    border: 3px solid black;
-    border-radius: 10px;
-    background-color: transparent;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+  
+.buttons-container {
+    width: 37%;
+    height: 25vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+.button-arounder {
+    background: white;
+    color: black;
+    border: solid 2px rgb(255, 255, 255);
+    padding: 0.5em 1.125em;
+    font-size: 1rem;
+    transition:1s cubic-bezier(0.42, 0, 0.02, 1.09);
+}
+
+.button-arounder:hover {
+    background-color: #000000;
+    padding: 0.7em 2em;
+    border-radius: 30px;
+    color: white;
+    border:2px solid rgb(0, 0, 0);
+    transition:1s cubic-bezier(0.29, 0.04, 0, 1.19);
+}
+  
+
+
+.marquee-container {
+    width: 85%;
+    overflow: hidden;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    white-space: nowrap;
+    box-sizing: border-box;
+    display: flex;
+    position: absolute;
+    top: 20%;
+}
+
+.marquee-content {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 30s linear infinite;
+    color: whitesmoke;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
 }
 
 .second-sec{
-    /* background-color: pink; */
+    margin: 1% 6%;
     margin-top: 10%;
 }
 .second-sec h1{
@@ -186,7 +271,24 @@ form input{
     font-size: 3.5rem;
     font-family: "Dancing Script", cursive;
     padding: 2% 10%;
+    color: whitesmoke;
+}
+/* third section of the home page */
 
+.third-sec{
+    margin-top: 10%;
+    width: 100%;
+    padding-bottom: 5%;
+}
+.text-box{
+    width: 100%;
+    padding: 1%;
+    color: whitesmoke;
+}
+.third-sec h1{
+    text-align: center;
+    font-size: 3.5rem;
+    font-family: "Dancing Script", cursive;
 }
 
 .fourth-sec h1{
@@ -194,17 +296,32 @@ form input{
     font-size: 3.5rem;
     font-family: "Dancing Script", cursive;
     padding: 5% 10%;
+    color: whitesmoke;
+}
+.fourth-detail {
+    font-size: 0.5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 1rem;
+    width: 80%;
+    padding: 1rem;
+    box-sizing: border-box; 
+    margin: 0 auto;
+    text-align: center; 
+    color: white;
+}
+.fourth-detail img{
+    width: 40%;
+    height: 55%;
 }
 
-.third img{
-    width: 50%;
-    height: 65%;
-}
-/* starting the css for ContactUs page */
+
+/* ----------starting the css for ContactUs page-------------- */
+
 .cont-main-box{
     background-color: rgba(52, 86, 86);
     padding: 50px;
-   width:72rem;
+    width: 78.9rem;
 }
 .inner-blurred-contactus-box{
     display: flex;
@@ -259,6 +376,7 @@ form input{
 .cont-box1-heading h1{
     font-size: 5rem;
     padding: 0px 35px 10px;
+    margin-top: 5%;
 
 }
 .contactus{
@@ -284,7 +402,6 @@ form input{
 .from-left{
     width: 50%;
 }
-
 
 .from-right{
     margin-top: 30px;
@@ -315,37 +432,12 @@ form input{
 }
 
 
-/* third section of the home page */
-.third-sec{
-    margin-top: 10%;
-    width: 100%;
-    padding-bottom: 5%;
-}
-.text-box{
-    width: 100%;
-    padding: 1%;
-}
-.third-sec h1{
-    text-align: center;
-    font-size: 3.5rem;
-    font-family: "Dancing Script", cursive;
-}
-.fourth-detail {
-    font-size: 1rem;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 1rem;
-    width: 100%;
-    padding: 1rem;
-    box-sizing: border-box; 
-    margin: 0 auto;
-    text-align: center; 
-}
 
+/*-------------------birthday page------------------------*/
 
-/* birthday page */
 .b-details{
     padding: 1% 5%;
+    color: whitesmoke;
 }
 .b-heading {
     position: relative;
@@ -362,7 +454,6 @@ form input{
     padding-bottom: 5%; 
 }
 
-
 .b-intro {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -370,9 +461,8 @@ form input{
     gap: 2%;
     background-color: rgba(255, 192, 203, 0.651);
     padding-bottom: 5%;
-  }
+}
   
- 
 .birthday-cont h1{
     font-size: 4rem;
 }
@@ -391,8 +481,32 @@ form input{
     letter-spacing: 0.1rem;
     line-height: 2;
 }
+.food-b{
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    width: 100%;
+    height: 50vh;
+    background-color: white;
+    border-radius: 20px;
+    padding-inline: 10px;
+    color: black;
+}
+.food-img-b img{
+    width: 300px; 
+}
+.food-img1-b img{
+    width: 300px;  
+}
+.food-img3-b img{
+    width: 300px; 
+}
+.click-me-b button{
+    border: white;
+}
 
-/*CSS for the service section of Birthday page */
+
+/* --------------------wedding page------------------------ */
 .food-details{
     width: 100%;
     height: 100%;
@@ -417,6 +531,7 @@ form input{
 }
 .food h4{
     text-align: center;
+    color: black;
 }
 .food .one{
     font-weight: 300;
@@ -424,8 +539,6 @@ form input{
 .food-img:hover{
     background-color: rgba(0, 0, 0, 0.231);
     border-radius: 20px;
- 
-    
 }
 .food-img1:hover{
     background-color: rgba(0, 0, 0, 0.231);
@@ -445,32 +558,32 @@ form input{
     object-fit: contain;
     border-radius: 20px;
 }
+.image-of-wed{
+    width: 20rem;
+} 
 .food-img img{
     height: auto;
     object-fit: cover; 
     max-width: 300px; 
     max-height: 300px;
-} 
+}
 .food-img3 img{
     height: auto;
   object-fit: cover; 
   max-width: 300px; 
   max-height: 300px;
 }
+
 .food-img1 img{
     height: auto; 
     max-width: 300px; 
     max-height: 300px;
     object-fit: cover; 
 }
-.food-img3{
-   
-    height: auto;
-    overflow: hidden;
+.click-me-w button{
+    border: white;
 }
-
-
-
+/* --------------------Services section----------------------- */
 .services{
     height: 100%;
     margin: 1% 0%;
@@ -497,8 +610,7 @@ form input{
 .chef{
     padding: 1% 5%;
     display: flex;
-    align-items: center;  
-      
+    align-items: center;    
 }
 
 .cheffood{
@@ -513,10 +625,112 @@ form input{
 }
 
 
+/* --------------menu page----------------- */
+
+.menu-sec h1{
+    text-align: center;
+    padding: 1% 8%;
+    font-size: 3rem;
+    font-family: "Dancing Script", cursive;
+}
+.menu-sec h3{
+    text-align: center;
+    font-family: "Dancing Script", cursive;
+    line-height: 0.1;
+    font-size: 1.2rem;
+}
+.menus-item{
+    margin-top: 3%;
+    display: flex;
+    background-color:rgb(255, 191, 0);
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+}
+@keyframes scaleUp {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.1);
+    }
+  }
+  
+  @keyframes moveLeftRight {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(20px);
+      transform: translateY(-10px);
+    }
+  }
+  
+.menus-item img {
+    width: 35%;
+    height: 35%;
+    padding: 5%;
+    animation: moveLeftRight 2s ease-in-out infinite;
+}
+.menus-item p{
+    font-family: monospace;
+    font-size: 1.2rem;
+    color: rgb(255, 255, 255);
+}
+.highlight {
+    color: #d9534f; /* Highlighted text color */
+    font-weight: bold;
+}
+  
+.dish-name {
+    color: #0088ff; /* Different color for dish names */
+    font-style: italic;
+}
+  
+.main-menu h1{
+    font-size: 3rem;
+    font-family: "Dancing Script", cursive;
+    padding: 2% 10%;
+    margin-top: 5%;
+    text-align: center;
+}
+
+.last-sec-menu-pg{
+    width: 100%;
+    height: 100vh;
+}
+
+.dish-cont {
+    height: auto; /* Let the content determine the height */
+    max-height: 100%; /* Ensure it doesn't exceed the parent's height */
+    overflow: auto;   /* Allow scrolling if content overflows */
+    background-color: yellow;
+    display: flex;
+    flex-wrap: wrap; /* Ensure cards wrap to the next line if needed */
+    gap: 10px;       /* Space between cards */
+    padding: 10px;   /* Adjust padding */
+    box-sizing: border-box; /* Include padding in element's total width and height */
+}
+
+.dish1 {
+    flex: 1 1 calc(25% - 20px); /* Four items per row, accounting for gap */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;   /* Adjust padding */
+    box-sizing: border-box; /* Include padding in element's total width and height */
+    max-width: 100%; /* Ensure it doesn't exceed parent's width */
+}
+
+.dish1 img {
+    max-width: 100%; /* Ensures the image doesn't overflow the card */
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover; /* Ensures the image covers the box while maintaining aspect ratio */
+}
 
 
-
-
+/*-------------------------Add-to-cart page--------------------*/
 
 /* media queries */
 
@@ -541,6 +755,18 @@ form input{
     .box1-side-form{
         width: 65rem;
     }
+    .right-img{
+        max-width:80%;
+        height:62vh;
+    };
+    
+}
+
+@media only screen and(max-width:1160px) {
+    .right-img {
+        max-width: 70%;
+        height: 58vh;
+}
     
 }
 @media only screen and (max-width:940px){
@@ -605,6 +831,22 @@ form input{
     
 } 
 
-  @media only screen and (max-width: 425px) {
-    
-  }
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .right-img {
+        max-width: 80%; /* Decrease size on smaller screens */
+        top: -3rem; /* Adjust positioning */
+    }
+}
+
+@media (max-width: 480px) {
+    .right-img {
+        max-width: 100%; /* Full width on small screens */
+        top: -2rem; /* Adjust positioning */
+    }
+
+    .right-sec {
+        right: 0; /* Remove right positioning */
+        padding: 0 2%; /* Adjust padding */
+    }
+}

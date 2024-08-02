@@ -7,23 +7,23 @@ import cateringImage2 from '../assest/official_catering.jpg';
 import birthday from "../assest/birthday.jpg"
 const Card = () => {
   return (
-    <div className="cards">
-      <div className='card1'>
+    <div className="cards-of-Cards">
+      <div className='card1-of-card-comp'>
       <img src={birthday}  alt={birthday}/>
       <h2>Birthday</h2>
-      <a href='/birthday' className='styling'>Check out!</a>
+      <a href='/birthday' className='styling-of-card-comp'>Check out!</a>
       </div>
 
-      <div className='card1'>
+      <div className='card1-of-card-comp'>
       <img src={cateringImage1}  alt={cateringImage}/>
       <h2>Weddings</h2>
-      <a href='/wedding' className='styling'>Check out!</a>
+      <a href='/wedding' className='styling-of-card-comp'>Check out!</a>
       </div>
 
-      <div className='card1'>
+      <div className='card1-of-card-comp'>
       <img src={cateringImage2}  alt={cateringImage}/>
       <h2>Meetings</h2>
-      <a href='' className='styling'>Check out!</a>
+      {/* <a href='' className='styling-of-card-comp'>Check out!</a> */}
       </div>
     </div>
     
