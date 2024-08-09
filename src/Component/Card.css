@@ -3,10 +3,10 @@
     padding-inline: 15px;
     justify-content: space-around;
     align-items: center;
-    width: 60rem;
+    width: 100%;
 }
 
-
+/* Styling for each card */
 .card1-of-card-comp {
     display: flex;
     width: 20rem;
@@ -19,8 +19,11 @@
     border-radius: 7%;
     box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
     flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
+/* Styling for card image */
 .card1-of-card-comp img {
     width: 15rem;
     height: 15rem;
@@ -28,12 +31,14 @@
     object-fit: cover;
 }
 
-.card1-of-card-comp h2{
+/* Styling for card title */
+.card1-of-card-comp h2 {
     text-align: center;
     font-family: "Dancing Script", cursive;
     font-size: 2.5rem;
 }
 
+/* Styling for card button */
 .styling-of-card-comp {
     background-color: chartreuse;
     width: 15rem;
@@ -46,8 +51,92 @@
     font-family: monospace;
 }
 
-@media only screen and (max-width: 1160px){
-    .cards-of-Cards{
+/* Responsive for screens 1160px and below */
+@media only screen and (max-width: 1160px) {
+    .cards-of-Cards {
         padding-inline: 10px;
+    }
+    
+    .card1-of-card-comp {
+        width: 16rem;
+        height: 22rem;
+    }
+    
+    .card1-of-card-comp img {
+        width: 12rem;
+        height: 12rem;
+    }
+    
+    .card1-of-card-comp h2 {
+        font-size: 2rem;
+    }
+}
+@media only screen and (max-width: 960px) {
+    .cards-of-Cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card1-of-card-comp {
+        width: 47%;
+        height: auto;
+    }
+}
+
+/* Responsive for screens 800px and below */
+@media only screen and (max-width: 800px) {
+    .cards-of-Cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card1-of-card-comp {
+        width: 80%;
+        height: auto;
+    }
+    
+    .card1-of-card-comp img {
+        width: 90%;
+    }
+    
+    .card1-of-card-comp h2 {
+        font-size: 1.8rem;
+    }
+    .styling-of-card-comp{
+        width: 10rem;
+    }
+}
+
+/* Responsive for screens 600px and below */
+@media only screen and (max-width: 600px) {
+    .card1-of-card-comp {
+        width: 90%;
+        padding: 20px;
+    }
+    
+    .card1-of-card-comp h2 {
+        font-size: 1.6rem;
+    }
+
+    .styling-of-card-comp {
+        width: 100%;
+        font-size: 0.9rem;
+        height: 2rem;
+    }
+}
+
+/* Responsive for screens 400px and below */
+@media only screen and (max-width: 400px) {
+    .card1-of-card-comp {
+        width: 95%;
+        padding: 15px;
+    }
+    
+    .card1-of-card-comp h2 {
+        font-size: 1.4rem;
+    }
+
+    .styling-of-card-comp {
+        font-size: 0.8rem;
+        height: 1.8rem;
     }
 }

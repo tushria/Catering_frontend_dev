@@ -10,7 +10,7 @@ import quantity from './assest/quantity.png';
 import recipe from './assest/recipe.png';
 import relax from './assest/relax.png';
 import rupee from './assest/Rupee.png';
-// import circlebg from './assest/cheff.png';
+import cheff from './assest/cheff.png';
 
 
 const Home = () => {
@@ -37,12 +37,12 @@ const Home = () => {
                 </div>
               </div>
               
-              {/* <div className='right-sec'>
-                <img src={circlebg} alt={circlebg} className='img1'  />
+              <div className='right-sec'>
                   <div className='right-img'>
-                    <img src={circlebg} alt={circlebg} className='img2' />
+                    <img src={cheff} alt={cheff} className='img2' />
                   </div>
-              </div> */}
+              </div>
+              
               </div>
                 <div className="marquee-container">
                   <div className="marquee-content">

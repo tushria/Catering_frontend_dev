@@ -11,7 +11,7 @@ import AddtoCart from './AddtoCart';
 import Cart from "./Component/Cart";
 import Context from './Context/Context';
 import UserProfile from './UserProfile';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 // import Navbar from './Component/Navbar';
 
@@ -21,6 +21,7 @@ function App() {
     <Router>
     <div>
     <Routes>
+      <Route path='/' element={<Home/>} />
       <Route path='/home' element={<Home/>} />
       <Route path='/menu' element={<Menu/>}/>
       <Route path='/contactus' element={<ContactUs/>} />
@@ -29,10 +30,10 @@ function App() {
       <Route path='/wedding' element={<Wedding/>}/>
       <Route path='/meeting' element={<Meeting/>}/>
       <Route path='/SignUpForm' element={<SignUpForm/>}/>
-      <Route path='/profile' element={<UserProfile/>}/>
       <Route path='/login' element={<LoginForm/>}/>
+      <Route path='/profile' element={<UserProfile/>}/>
       <Route path='/cart' element={<Cart/>} />
-      {/* <Route path="*" element={<div>404 Not Found</div>} /> */}
+      <Route path="*" element={<div>404 Not Found</div>} />
     </Routes>
     </div>
     </Router>
