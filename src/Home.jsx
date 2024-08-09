@@ -31,7 +31,7 @@ const Home = () => {
                   <h1 id="tag-line">Where flavors meet and mingle</h1>
                 </div>
                 <div className="buttons-container">
-                  <Link to= '/ContactUs'>
+                  <Link to= '/SignUpForm'>
                   <button className="button-arounder">Contact Us</button>
                   </Link>
                 </div>
@@ -42,7 +42,7 @@ const Home = () => {
                     <img src={cheff} alt={cheff} className='img2' />
                   </div>
               </div>
-              
+
               </div>
                 <div className="marquee-container">
                   <div className="marquee-content">

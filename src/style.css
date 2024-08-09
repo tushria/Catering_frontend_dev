@@ -758,6 +758,9 @@ form input{
         max-width: 70%;
         height: 58vh;
 }
+.marquee-container{
+    top: 15%;
+}
     
 }
 @media only screen and (max-width:940px){
@@ -769,6 +772,17 @@ form input{
     }
     .box1-side-form{
         width: 65rem;
+    }
+    .right-img .img2 {
+        position: absolute;
+        height: 318px;
+        bottom: 100%;
+        left: 70%;
+        top: 5%;
+        width: 23%;
+    }
+    .marquee-container{
+        top: 16%;
     }
    
 }
@@ -827,16 +841,31 @@ form input{
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
-    .right-img {
-        max-width: 80%; 
-        top: -3rem; 
+    .right-img .img2 {
+        position: absolute;
+        height: 288px;
+        bottom: 100%;
+        left: 67%;
+        top: 4%;
+        width: 23%;
+    }
+    .second-sec h1{
+        font-size: 3rem;
+    }
+    .fourth-sec h1{
+        font-size: 2.4rem;
+        padding: 0px;
     }
 }
 
 @media (max-width: 480px) {
-    .right-img {
-        max-width: 100%; 
-        top: -2rem;
+    .right-img .img2 {
+        position: absolute;
+        height: 217px;
+        bottom: 100%;
+        left: 67%;
+        top: 5%;
+        width: 23%;
     }
 
     .right-sec {
@@ -846,10 +875,24 @@ form input{
     .inner-box1 {
         width: 135%;
     }
+    .buttons-container{
+        width: 35%;
+    }
 }
 /* Media Queries for Responsiveness */
 @media (max-width: 320px) {
     .inner-box1 {
         width: 170%;
+    }
+    .right-img .img2 {
+        position: absolute;
+        height: 205px;
+        bottom: 100%;
+        left: 67%;
+        top: 4%;
+        width: 23%;
+    }
+    .buttons-container{
+        width: 47%;
     }
 }

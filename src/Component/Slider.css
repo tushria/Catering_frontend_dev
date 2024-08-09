@@ -46,3 +46,9 @@
 .swiper-slide-shadow-top {
   opacity: 0.3 !important;
 }
+
+@media (max-width: 480px) {
+ .mySwiper{
+  height: 20%;
+ }
+}

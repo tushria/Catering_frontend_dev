@@ -20,24 +20,39 @@ code {
   font-family: "Dancing Script", cursive;
   font-optical-sizing: auto;
 } 
-
+@media (max-width:1085px) {
+  #web-name {
+    font-size: 5.7rem;
+}
+}
 @media (max-width:930px) {
-  #web-name{
-    font-size: 6rem;
-  }
+  #web-name {
+    font-size: 4.7rem;
+}
 }
 @media(max-width:800px){
   #web-name{
-    font-size: 3.8rem;
+    font-size: 4rem;
+  }
+  #tag-line{
+    font-size: 3rem;
+    width: 70%;
   }
 }
 @media(max-width:650px){
   #web-name{
+    font-size: 3.4rem;
+  }
+  #tag-line{
     font-size: 2.5rem;
+    width: 63%;
   }
 }
 @media(max-width:450px){
   #web-name{
+    font-size: 2.5rem;
+  }
+  #tag-line{
     font-size: 1.5rem;
   }
 }
