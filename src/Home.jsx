@@ -11,7 +11,9 @@ import recipe from './assest/recipe.png';
 import relax from './assest/relax.png';
 import rupee from './assest/Rupee.png';
 import cheff from './assest/cheff.png';
-
+import food from './assest/food.png'
+import CustomeCursor from './Component/CustomeCursor';
+import RandomCollage from './Component/RandomCollage ';
 
 const Home = () => {
   
@@ -19,6 +21,7 @@ const Home = () => {
     <div>
       <div className='main-body'>
       <div className='inner-box1'>
+        <CustomeCursor/>
             <section className='blured-box'>
                 <div className="logo"></div>
                   <Header/>
@@ -27,8 +30,8 @@ const Home = () => {
               <div className="main-cont">
               <div className="left-sec">
                 <div className="left-main">
-                  <h1 id="web-name">MasalaMingle</h1>
-                  <h1 id="tag-line">Where flavors meet and mingle</h1>
+                  <h1 id="web-name">FestiveFare</h1>
+                  <h1 id="tag-line">Celebrate with a Feast, Crafted to Perfection</h1>
                 </div>
                 <div className="buttons-container">
                   <Link to= '/SignUpForm'>
@@ -39,30 +42,31 @@ const Home = () => {
               
               <div className='right-sec'>
                   <div className='right-img'>
-                    <img src={cheff} alt={cheff} className='img2' />
+                    <img src={food} alt={food} className='img2' />
                   </div>
               </div>
 
               </div>
                 <div className="marquee-container">
                   <div className="marquee-content">
-                      <span>Welcome to MasalaMingle, a food catering company in India. We provide event catering service across India.❤️🤍🩵</span>
+                      <span>Welcome to FestiveFare, a food catering company in India. We provide event catering service across India.❤️🤍🩵</span>
                      
                   </div>
                 </div>
               <section className='second-sec'>
-                <h1>~ Special Occassions ~</h1>
+                <h1> Special Occassions </h1>
                 <Card/> 
               </section>
               <section className='third-sec'>
                 <div className='text-box'>
-                <h1>~ Savor the Flavor ~</h1>
+                <h1> Savor the Flavor </h1>
                 </div>
-                  <Slider/>
+                  {/* <Slider/> */}
+                  <RandomCollage/>
               </section>
 
               <section className='fourth-sec'>
-              <h1>~ Why Book MasalaMingle? ~</h1>
+              <h1> Why Book FestiveFare? </h1>
               <div className='fourth-detail'>
                 <div className='first'>
                 <img src={hotfresh} alt={hotfresh} />

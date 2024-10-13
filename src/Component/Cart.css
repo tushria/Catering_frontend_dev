@@ -1,0 +1,28 @@
+.checkout-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .item-image-text {
+    display: flex;
+    align-items: center;
+  }
+  
+  .item-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 15px;
+  }
+  
+  .item-details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .item-name {
+    font-weight: bold;
+    font-size: 16px;
+  }
+  

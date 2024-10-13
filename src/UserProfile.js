@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef} from 'react';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import { getDatabase, ref, get } from 'firebase/database';
 import './UserProfile.css';
-import by_default_user from './assest/by_default_user.jpg';
+// import by_default_user from './assest/by_default_user.jpg';
 import Header from './Component/Header';
 
 function UserProfile() {

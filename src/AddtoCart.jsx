@@ -1,5 +1,6 @@
 import React from 'react'
 import './style.css';
+
 import { Link } from 'react-router-dom';
 import {Navbar,
         Container, 
@@ -10,7 +11,7 @@ import {Navbar,
         Button}
         from "react-bootstrap";
 import { GiShoppingCart } from "react-icons/gi";
-import Context from './Context/Context';
+import Context from './Context/Context.js';
 import Home from './Component/Home';
 import SingleProduct from './Component/SingleProduct';
 import { CartState } from './Context/Context';
@@ -23,6 +24,22 @@ const AddtoCart = () => {
     productDispatch,
   } = CartState();
 
+// In the file where you are listing the products
+
+// const transformProducts = () => {
+//   let filteredProducts = state.products;
+
+//   // If there's a search query, filter the products
+//   if (productState.searchQuery) {
+//     filteredProducts = filteredProducts.filter((prod) =>
+//       prod.userName.toLowerCase().includes(productState.searchQuery.toLowerCase())
+//     );
+//   }
+
+//   return filteredProducts;
+// };
+
+
 return (
     <div>
       <div className='main-body'>
@@ -32,10 +49,12 @@ return (
                     <Header/>
                     <Navbar bg="dark" variant='dark' style={{height:80}}>
                       <Container>
-                        <Navbar.Text className='search'>
+                      {/* <SearchBar /> */}
+                        {/* this one is responsible for searching the text */}
+                        {/* <Navbar.Text className='search'>
                             <FormControl 
                             style={{width:500}} 
-                            placeholder='search your choice'
+                            placeholder='Search here'
                             className='m-auto'
                             onChange={(e) =>{
                               productDispatch({
@@ -44,7 +63,21 @@ return (
                               });
                             }}
                             />
-                        </Navbar.Text>
+                        </Navbar.Text> */}
+                        <Navbar.Text className='search'>
+  <FormControl 
+    style={{width:500}} 
+    placeholder='Search here'
+    className='m-auto'
+    onChange={(e) => {
+      productDispatch({
+        type: "FILTER_BY_SEARCH",
+        payload: e.target.value,
+      });
+    }}
+  />
+</Navbar.Text>
+
                         <Nav>
                         <Dropdown align="end">
                             <Dropdown.Toggle variant="success">
@@ -93,7 +126,10 @@ return (
                       </Container>
                     </Navbar>
                       <Context></Context>
-                      <Home><SingleProduct></SingleProduct></Home>
+                      <Home>
+                  
+                        <SingleProduct></SingleProduct>
+                        </Home>
 
             </section>
         </div>

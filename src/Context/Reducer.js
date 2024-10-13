@@ -15,21 +15,43 @@ export const cartReducer=(state, action)=>{
             return state;
     }
 };
-export const productReducer =(state,action) =>{
-    switch(action.type){
-        case "SORT_BY_PRICE":
-            return {...state, sort:action.payload};
-        case "FILTER_BY_DELIVERY":
-            return {...state, fastDelivery: !state.fastDelivery};
-        case "FILTER_BY_SEARCH":
-            return {...state, searchQuery:action.payload};
-        case "CLEAR_FILTERS":
-            return {
-                fastDelivery:false,
-                searchQuery:"",
-                sort: "",
-            };
-        default:
-            return state;
+// export const productReducer =(state,action) =>{
+//     switch(action.type){
+//         case "SORT_BY_PRICE":
+//             return {...state, sort:action.payload};
+//         case "FILTER_BY_DELIVERY":
+//             return {...state, fastDelivery: !state.fastDelivery};
+//         case "FILTER_BY_SEARCH":
+//             return {...state, searchQuery:action.payload};
+//         case "CLEAR_FILTERS":
+//             return {
+//                 fastDelivery:false,
+//                 searchQuery:"",
+//                 sort: "",
+//             };
+//         default:
+//             return state;
+//     }
+// export const productReducer = (state, action) => {
+//     switch (action.type) {
+//       case 'FILTER_BY_SEARCH':
+//         return {
+//           ...state,
+//           searchQuery: action.payload,  // Update searchQuery with user input
+//         };
+//       default:
+//         return state;
+//     }
+// Reducer.js
+export const productReducer = (state, action) => {
+    switch (action.type) {
+      case "FILTER_BY_SEARCH":
+        return {
+          ...state,
+          searchQuery: action.payload,
+        };
+      default:
+        return state;
     }
-}
+    
+};

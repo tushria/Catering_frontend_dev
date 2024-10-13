@@ -1,6 +1,8 @@
 import { Button, Card } from "react-bootstrap";
 import { CartState } from "../Context/Context";
 
+
+
 const SingleProduct = ({prod}) => {
   const{
     state:{carts},
@@ -17,11 +19,7 @@ const SingleProduct = ({prod}) => {
                 <Card.Title>{prod.userName}</Card.Title>
                 <Card.Subtitle style={{paddingBottom:10}}>
                     <span>₹{prod.price}</span>
-                    {prod.fastDelivery ? (
-                        <div>Fast Delivery</div>
-                    ) : (
-                        <div>4 days Delivery</div>
-                    )}               
+                                 
                 </Card.Subtitle>
                
                 {carts.some(c=>c.userId===prod.userId)?(
