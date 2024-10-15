@@ -5,6 +5,7 @@ import cateringImage from '../assest/b-dy2_catering.jpg';
 import cateringImage1 from '../assest/in-wed.jpg';
 import cateringImage2 from '../assest/official_catering.jpg';
 import birthday from "../assest/birthday.jpg"
+
 const Card = () => {
   return (
     <div className="cards-of-Cards">

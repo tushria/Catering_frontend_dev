@@ -37,21 +37,7 @@ const Filters =() => {
                 checked={sort === "highToLow" ? true: false}
                 />
             </span>
-            {/* <span>
-                <Form.Check
-                inline
-                label="Fast Delivery Only"
-                name="group1"
-                type="checkbox"
-                id={`id1`}
-                onChange={(e) =>
-                    productDispatch({
-                        type:"FILTER_BY_DELIVERY",
-                    })
-                }
-                checked={fastDelivery}
-                />
-            </span> */}
+       
             
             <Button variant="light"
             onClick={() =>

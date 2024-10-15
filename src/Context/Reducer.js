@@ -15,43 +15,40 @@ export const cartReducer=(state, action)=>{
             return state;
     }
 };
-// export const productReducer =(state,action) =>{
-//     switch(action.type){
-//         case "SORT_BY_PRICE":
-//             return {...state, sort:action.payload};
-//         case "FILTER_BY_DELIVERY":
-//             return {...state, fastDelivery: !state.fastDelivery};
-//         case "FILTER_BY_SEARCH":
-//             return {...state, searchQuery:action.payload};
-//         case "CLEAR_FILTERS":
-//             return {
-//                 fastDelivery:false,
-//                 searchQuery:"",
-//                 sort: "",
-//             };
-//         default:
-//             return state;
-//     }
-// export const productReducer = (state, action) => {
-//     switch (action.type) {
-//       case 'FILTER_BY_SEARCH':
-//         return {
-//           ...state,
-//           searchQuery: action.payload,  // Update searchQuery with user input
-//         };
-//       default:
-//         return state;
-//     }
-// Reducer.js
 export const productReducer = (state, action) => {
-    switch (action.type) {
-      case "FILTER_BY_SEARCH":
-        return {
-          ...state,
-          searchQuery: action.payload,
-        };
-      default:
-        return state;
-    }
-    
+  switch (action.type) {
+    case "SORT_BY_PRICE":
+      return {
+        ...state,
+        sort: action.payload,  // payload will be 'asc' or 'desc'
+        products: [...(state.products || [])].sort((a, b) => {
+          if (action.payload === 'asc') {
+            return a.price - b.price;  // Sort in ascending order
+          } else {
+            return b.price - a.price;  // Sort in descending order
+          }
+        })
+      };
+      
+    case "FILTER_BY_SEARCH":
+      return {
+        ...state,
+        products: (state.products || []).filter(product => 
+          product.name.toLowerCase().includes(action.payload.toLowerCase())
+        ),
+        searchQuery: action.payload,
+      };
+
+    case "CLEAR_FILTERS":
+      return {
+        ...state,
+        sort: "",
+        searchQuery: "",
+        products: state.originalProducts || [],  // Assuming originalProducts is defined
+      };
+
+    default:
+      return state;
+  }
 };
+

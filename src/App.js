@@ -1,6 +1,7 @@
 import './App.css';
 import Home from './Home';
 import LoginForm from './LoginForm';
+// import AboutPage from './AboutPage';
 import SignUpForm from './SignUpForm';
 import ContactUs from './ContactUs';
 import Birthday from './Birthday';
@@ -23,6 +24,7 @@ function App() {
     <Routes>
       <Route path='/' element={<Home/>} />
       <Route path='/home' element={<Home/>} />
+      {/* <Route path='/about' component={<AboutPage/>} /> */}
       <Route path='/menu' element={<Menu/>}/>
       <Route path='/contactus' element={<ContactUs/>} />
       <Route path='/addtocart' element={<AddtoCart/>}/>

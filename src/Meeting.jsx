@@ -8,7 +8,7 @@ import outdoor_cop_meet from './assest/outdoor_cop_meet.jpg';
 const Meeting = () =>{
  return (
     <div>
-      <div className='main'>
+      <div className='main meet'>
         <div className='inner-box1'>
          <div className='blured-box'>
           <Header/>

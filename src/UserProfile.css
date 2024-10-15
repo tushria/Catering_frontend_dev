@@ -1,4 +1,4 @@
-
+/* 
 #userProfile{
     border: 2px solid black;
     padding: 20px;
@@ -27,4 +27,67 @@ img {
 }
 h1{
     color: white;
+} */
+
+
+#userProfile {
+    border: 2px solid black; /* Border around the profile box */
+    padding: 20px; /* Inner spacing */
+    width: 80%; /* Width of the profile box */
+    display: flex; /* Flexbox layout for alignment */
+    align-items: center; /* Center items vertically */
+    height: 46vh; /* Height of the profile box */
+    background-color: rgba(255, 255, 255, 0.153); /* Slightly transparent white background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    margin: auto; /* Center the box horizontally */
+}
+
+.file-input-container {
+    width: 25%; /* Width of the image container */
+    border-radius: 50%; /* Circular shape */
+    cursor: pointer; /* Pointer cursor on hover */
+    display: flex; /* Flexbox for centering */
+    justify-content: center; /* Center contents horizontally */
+    align-items: center; /* Center contents vertically */
+    margin-right: 20px; /* Space between image and details */
+}
+
+.userimg {
+    width: 10rem; /* Fixed width for the image */
+    height: 10rem; /* Fixed height for the image */
+    object-fit: cover; /* Maintain aspect ratio while covering */
+    border-radius: 50%; /* Circular image */
+    border: 2px solid #007bff; /* Border around the image */
+}
+
+.u-detail {
+    color: white; /* White text color for contrast */
+    font-size: 1.4rem; /* Font size */
+    line-height: 1.5; /* Increased line height for readability */
+    display: flex; /* Flexbox for stacking */
+    flex-direction: column; /* Stack elements vertically */
+}
+
+h1 {
+    color: white; /* White color for the heading */
+    text-align: center; /* Center align the heading */
+    margin-bottom: 20px; /* Space below the heading */
+}
+.userBtn {
+    position: relative;
+    top: 90px;
+    left: 0rem;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.userBtn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
 }

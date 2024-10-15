@@ -5,7 +5,7 @@ import collage2 from '../assest/collage2.jpg';
 import collage3 from '../assest/collage3.jpg';
 import collage4 from '../assest/collage4.jpg';
 import collage5 from '../assest/collage5.jpg';
-const images = [collage1,collage5,collage2,collage3,collage4];
+const images = [collage1, collage5,collage3,collage2,collage4];
 
 const RandomCollage = () => {
   return (

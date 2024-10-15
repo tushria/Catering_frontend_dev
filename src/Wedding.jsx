@@ -9,7 +9,7 @@ import Header from './Component/Header';
 const Wedding = () => {
   return (
     <div>
-    <div className='main'>
+    <div className='main wed'>
   <div className='inner-box1'>
     <div className='blured-box'>
         <Header/>

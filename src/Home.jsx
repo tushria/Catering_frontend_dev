@@ -10,10 +10,14 @@ import quantity from './assest/quantity.png';
 import recipe from './assest/recipe.png';
 import relax from './assest/relax.png';
 import rupee from './assest/Rupee.png';
-import cheff from './assest/cheff.png';
+
 import food from './assest/food.png'
 import CustomeCursor from './Component/CustomeCursor';
 import RandomCollage from './Component/RandomCollage ';
+import Birthday from './Birthday';
+
+import Footer from './Component/Footer';
+import ReviewInputCard from './Component/ReviewInputCard';
 
 const Home = () => {
   
@@ -34,7 +38,7 @@ const Home = () => {
                   <h1 id="tag-line">Celebrate with a Feast, Crafted to Perfection</h1>
                 </div>
                 <div className="buttons-container">
-                  <Link to= '/SignUpForm'>
+                  <Link to= '/ContactUs'>
                   <button className="button-arounder">Contact Us</button>
                   </Link>
                 </div>
@@ -95,8 +99,9 @@ const Home = () => {
                 </div>
               </div>
               </section>
-
+            <ReviewInputCard/>
             </section>
+          <Footer/>
         </div>
         </div>
     </div>

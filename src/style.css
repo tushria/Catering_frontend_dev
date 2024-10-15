@@ -22,123 +22,173 @@
     position: fixed;
 }
 
-/* sign page */
-h2{
+/* Signup Page Styles */
+
+.signup-container h2 {
     padding: 18px 5px;
+    color: #ffffff; /* Ensures the heading stands out against the background */
+    text-align: center; /* Center align heading for better presentation */
 }
-p{
-    padding: 15px 10px;
-}
-.signup-container{
+
+
+
+.signup-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     background-image: url('../src/assest/homebg.jpg');
+    background-size: cover; /* Ensure the background covers the entire container */
+    background-position: center; /* Center the background image */
 }
+
 .signup-form {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.498); 
     padding: 30px;
-    color: whitesmoke;
+    color: #333; 
     border-radius: 21px;
-    box-shadow: 0 0 10px black;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Softer shadow for depth */
     display: flex;
     flex-direction: column;
-    height: 70%;
-    width: 50%;
+    height: 80%; 
+    width: 400px; 
+    margin: auto; 
 }
-.signup-form button{
-    background-color: rgb(89, 186, 247);
+
+.signup-form button {
+    background-color: rgb(46, 164, 238);
     color: white;
     border: none;
-    padding: 8px 20px;
+    padding: 10px; /* Increased padding for better touch target */
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
-}
-.sign-form button:hover{
-    background-color: rgb(0, 0, 0);
-    border-radius: 30px;
-    border-color: none;
-    padding: 8px 20px;
-}
-form placeholder{
-    color: black;
-}
-.signup-form input,placeholder{
-    border-bottom: 1px solid rgb(255, 255, 255);
-    outline:none;
-}
-form input{
-    background-color: transparent;
-    border-bottom: 1px solid rgb(0, 0, 0);
-    border: none;
-    padding: 10px;
-    margin: 15px 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions for hover effects */
 }
 
-/* login page */
-h2{
-    padding: 18px 5px;
-}
-p{
-    padding: 15px 10px;
-}
-.login-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-image: url('../src/assest/homebg.jpg');
-}
-.login-form {
-    background: rgba(255, 255, 255, 0.2);
-    padding: 30px;
-    border-radius: 21px;
-    box-shadow: 0 0 10px black;
-    display: flex;
-    flex-direction: column;
-    height: 70%;
-    color: whitesmoke;
-    width: 50%;
-}
-.login-form button{
-    background-color: rgb(89, 186, 247);
-    color: white;
-    border: none;
-    padding: 8px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-}
-.login-form button:hover{
+.signup-form button:hover {
     background-color: rgb(0, 0, 0);
     border-radius: 30px;
-    border-color: none;
-    padding: 8px 20px;
-}
-form placeholder{
-    color: rgb(167, 167, 167);
-    border: none;
-}
-.login-form input,placeholder{
-    border-bottom: 1px solid rgb(255, 255, 255);
-    outline:none;
+    transform: translateY(-2px); 
 }
 
-form input{
-    background-color: transparent;
-    border-bottom: 1px solid rgb(0, 0, 0);
-    border: none;
+.signup-form input {
+    background-color: transparent; /* Keep the background transparent */
+    border: none; /* Remove default borders */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.8); /* Slightly transparent border for inputs */
     padding: 10px;
-    border-bottom: 1px solid white;
-    margin: 15px 10px;
+    margin: 15px 0; 
+    color: #ffffff; 
 }
-.link-des{
+
+.signup-form input::placeholder {
+    color: rgb(227, 227, 227); 
+}
+
+.link-des {
     text-decoration: none;
     color: rgb(255, 255, 255);
+    text-align: center; 
+    margin-top: 20px;
 }
 
+
+/* Login Page Styles */
+
+.login-form h2 {
+    padding: 18px 5px;
+    color: #ffffff; 
+    text-align: center;
+}
+.success-message {
+    color: rgb(206, 35, 35);
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('../src/assest/homebg.jpg');
+    background-size: cover; /* Ensure the background covers the entire container */
+    background-position: center; /* Center the background image */
+}
+
+.login-form {
+    background: rgba(255, 255, 255, 0.498); /* Slightly more opaque for better readability */
+    padding: 30px;
+    border-radius: 21px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Softer shadow for depth */
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+    color: #333; 
+    width: 400px; /* Fixed width for better layout */
+    margin: auto; /* Center the form horizontally */
+}
+
+.login-form button {
+    background-color: rgb(46, 164, 238);
+    color: white;
+    border: none;
+    padding: 10px; /* Increased padding for better touch target */
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions for hover effects */
+}
+
+.login-form button:hover {
+    background-color: rgb(0, 0, 0);
+    border-radius: 30px;
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+.login-form input {
+    background-color: transparent;
+    border: none; /* Remove default borders */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.8); /* Slightly transparent border */
+    padding: 10px;
+    margin: 15px 0; /* Space between inputs */
+    color: #ffffff; /* White text for inputs */
+}
+
+.login-form input::placeholder {
+    color: rgba(255, 254, 254, 0.795); /* Placeholder color */
+}
+
+.link-des {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    text-align: center; /* Center the link */
+    margin-top: 20px; /* Add space above the link */
+}
+.account-check{
+    background-color: #ffffff61;
+    padding: 25px;
+    border-radius: 20px;
+}
+.account-check h2{
+    padding: 10px;
+}
+.acct-btn{
+        background-color: white;
+        border-radius: 10px;
+        padding: 3px 32px;
+        margin-left: 20%;
+        border: white;
+}
+.acct-btn:hover{
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    padding: 3px 32px;
+    margin-left: 20%;   
+}
 /* home page */
 .main-body{
     background-color: rgb(46, 46, 46); 
@@ -232,7 +282,7 @@ form input{
     box-sizing: border-box;
     display: flex;
     position: absolute;
-    top: 20%;
+    top: 16%;
 }
 
 .marquee-content {
@@ -308,7 +358,7 @@ form input{
 
 /* ----------starting the css for ContactUs page-------------- */
 
-.cont-main-box{
+/* .cont-main-box{
     background-color: rgba(52, 86, 86);
     padding: 50px;
     width: 78.9rem;
@@ -419,62 +469,188 @@ form input{
 }
 .cont-lbl7{
     padding: 20px 5px;
+} */
+.cont-main-box {
+    background-image: url('../src/assest/homebg.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 50px;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
 }
+
+.inner-blurred-contactus-box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 67rem;
+    margin: 0 auto;
+}
+
+.box2-side {
+    border-radius: 10px;
+    font-family: 'Arial', sans-serif;
+    padding: 35px; /* Increased padding for better spacing */
+    color: whitesmoke;
+    text-align: center; /* Center text */
+}
+
+#cont-box2-heading1 {
+    font-size: 4.5rem; /* Adjusted for better proportion */
+    color: whitesmoke;
+    margin-bottom: 10px; /* Spacing between headings */
+}
+
+#cont-box2-heading2 {
+    font-size: 1.5rem; /* Slightly smaller for better hierarchy */
+    font-weight: 400; /* Normal weight for subtitle */
+    color: whitesmoke;
+    margin-bottom: 30px; /* Space below subtitle */
+}
+
+.box1-side {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+.box1-side-form {
+    font-family: 'Arial', sans-serif;
+    padding: 20px; /* Add padding for the form */
+    background: rgba(255, 255, 255, 0.1); /* Slight background to form */
+    border-radius: 10px; /* Rounded corners for the form */
+}
+
+.contactus {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+    width: 37rem;
+}
+.contactus label {
+    font-size: 1.5rem;
+    color: whitesmoke;
+    margin-bottom: 5px; /* Space below labels */
+}
+
+.contactus input, .contactus textarea {
+    border: none;
+    border-bottom: 2px solid whitesmoke; /* Thicker bottom border for visibility */
+    width: 100%; /* Full width inputs */
+    outline: none;
+    background-color: transparent; /* Transparent background */
+    color: whitesmoke;
+    padding: 10px; /* Add padding inside input fields */
+    margin-bottom: 20px; /* Space between input fields */
+}
+
+.contactus input::placeholder, .contactus textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7); /* Light placeholder color */
+}
+
+.contactus textarea {
+    min-height: 100px; /* Minimum height for text area */
+    resize: vertical; /* Allow vertical resizing */
+}
+
+.form-btn {
+    text-align: center;
+    margin-top: 20px; /* Space above button */
+}
+
+.form-btn button {
+    padding: 0.75rem 2rem; /* Padding for better click area */
+    font-family: 'Arial', sans-serif;
+    border-style: none;
+    font-size: 1.5rem;
+    background-color: rgb(89, 186, 247); /* Button background */
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition for hover effect */
+}
+
+.form-btn button:hover {
+    background-color: rgb(0, 0, 0);
+    transform: scale(1.05); /* Slightly grow button on hover */
+}
+
+.confirmation-message {
+    margin-top: 15px;
+    color: rgb(173, 8, 8);
+    font-size: 1.2rem; /* Slightly larger font for emphasis */
+    text-align: center; /* Center the confirmation message */
+}
+
 
 
 
 /*-------------------birthday page------------------------*/
-
-.b-details{
+.main.birth{
+        height: auto;
+        width: 100%;
+        background-color: white;
+        border-radius: 50%;
+        position: relative;
+}
+.b-details {
     padding: 1% 5%;
     color: whitesmoke;
 }
+
 .b-heading {
     position: relative;
     width: 100%;
-    height: 3%;
     text-align: center;
+    margin-bottom: 2%;
 }
+
 .b-heading h1 {
     font-size: 3rem;
     font-family: "Dancing Script", cursive;
     width: 100%;
-    height: 3%;
     text-align: center;
-    padding-bottom: 5%; 
+    padding-bottom: 5%;
 }
 
 .b-intro {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding-top: 2%;
     gap: 2%;
     background-color: rgba(255, 192, 203, 0.651);
-    padding-bottom: 5%;
+    padding: 2% 0 5%;
 }
-  
-.birthday-cont h1{
+
+.birthday-cont h1 {
     font-size: 4rem;
 }
 
-.b-img img{
+.b-img img {
     width: 70%;
     height: 90%;
     border: 10px solid white;
     margin-left: 15%;
-    box-shadow: rgba(0, 0, 0, 0.457);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.457);
 }
-.birthday-cont{
+
+.birthday-cont {
     width: 100%;
-    height: 30%;
     font-size: 1.3rem;
     letter-spacing: 0.1rem;
     line-height: 2;
 }
-.food-b{
+
+.food-b {
     display: flex;
     align-items: center;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     width: 100%;
     height: 50vh;
     background-color: white;
@@ -482,21 +658,37 @@ form input{
     padding-inline: 10px;
     color: black;
 }
-.food-img-b img{
-    width: 300px; 
+
+.food-img-b img,
+.food-img1-b img,
+.food-img3-b img {
+    width: 300px;
 }
-.food-img1-b img{
-    width: 300px;  
+
+.click-me-b button {
+    border: none; /* Or you can style it further */
+    padding: 10px 20px;
+    background-color: lightblue;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
 }
-.food-img3-b img{
-    width: 300px; 
+
+.click-me-b button:hover {
+    background-color: darkblue;
+    color: white;
 }
-.click-me-b button{
-    border: white;
-}
+
 
 
 /* --------------------wedding page------------------------ */
+.main.wed{
+    height: auto;
+    width: 100%;
+    background-color: white;
+    border-radius: 50%;
+    position: relative;
+}
 .food-details{
     width: 100%;
     height: 100%;
@@ -575,6 +767,13 @@ form input{
 }
 
 /* -----------------------------Meeting page-------------------------- */
+.main.meet{
+    height: auto;
+    width: 100%;
+    background-color: white;
+    border-radius: 50%;
+    position: relative;
+}
 .food-img1-meet img {
     height: auto;
     max-width: 300px;

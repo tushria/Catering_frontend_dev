@@ -1,88 +1,214 @@
-import React, { useState, useEffect, useRef} from 'react';
-import { getAuth, onAuthStateChanged } from 'firebase/auth';
-import { getDatabase, ref, get } from 'firebase/database';
+// import React, { useState, useEffect, useRef} from 'react';
+// import { getAuth, onAuthStateChanged } from 'firebase/auth';
+// import { getDatabase, ref, get } from 'firebase/database';
+// import './UserProfile.css';
+// // import by_default_user from './assest/by_default_user.jpg';
+// import Header from './Component/Header';
+
+// function UserProfile() {
+//   const [user, setUser] = useState(null);
+//   const [userName, setUserName] = useState('');
+//   const [userId, setUserId] = useState('');
+//   const [displayName, setDisplayName] = useState(''); 
+//   const [emailid , setEmailid] = useState('');
+//   const inputRef =useRef(null);
+//   const[image,setImage]=useState('')
+
+//   const handleImageClick=()=>{
+//     inputRef.current.click();
+//   };
+//   const handleImageChange =(e) =>{
+//     const file = e.target.files[0];
+//     console.log(file);
+//     setImage(e.target.files[0]);
+//   };
+
+//   useEffect(() => {
+//     const auth = getAuth();
+//     onAuthStateChanged(auth, (user) => {
+//       if (user) {
+//         const userId = user.uid;
+//         const database = getDatabase();
+//         const userRef = ref(database, `users/${userId}/private/login credentials`);
+//         get(userRef).then((snapshot) => {
+//           if (snapshot.exists()) {
+//             const userData = snapshot.val();
+//             setUserName(userData.userName);
+//             setUserId(userData.userId);
+//             setUser(userName);
+//           } else {
+//             console.log('No user data found', user);
+//           }
+//         });
+//         setUserName(user.userName);
+//         setDisplayName(user.displayName); 
+//         setEmailid(user.email);
+//       } else {
+//         console.log('No user logged in');
+//       }
+//     });
+//   }, []);
+
+//   return (
+//     <div className='main-body'>
+//       <div className='inner-box1'>
+//           <section className='blured-box'>
+//               <Header/>
+//                 <h1>User Profile</h1>
+//                 <div id="userProfile" >
+//                   <div className="file-input-container" onClick={handleImageClick}>
+//                     {/* <img src={by_default_user}/> */}
+//                     {image ? (
+//                     <img src={URL.createObjectURL(image)} alt=''/>
+//                     ) : (
+//                     <img src='./by_default_user.jpg' alt=''/>
+//                     )}
+//                     <input 
+//                       type="file" 
+//                       ref={inputRef} 
+//                       onClick={handleImageChange} 
+//                       style={{
+//                         display:'none'
+//                       }}
+//                       />
+//                     {/* <button class="file-input-button">Browse</button> */}
+//                   </div>
+//                   <div className='u-detail'>
+//                     <p>Username: {displayName}</p> 
+//                     <p>Registered email-id: {emailid}</p>
+//                   </div>
+//                   <br/>
+//                   <br/>
+//                   <br/>
+//                 </div>
+//           </section>
+//         </div>
+//     </div>
+//   );
+// }
+
+// export default UserProfile;
+
+
+
+import React, { useState, useEffect, useRef } from 'react';
+import { getAuth, onAuthStateChanged, signOut } from 'firebase/auth';
+import { getDatabase, ref, get, update } from 'firebase/database';
 import './UserProfile.css';
-// import by_default_user from './assest/by_default_user.jpg';
 import Header from './Component/Header';
+import { useNavigate } from 'react-router-dom';
 
 function UserProfile() {
   const [user, setUser] = useState(null);
-  const [userName, setUserName] = useState('');
-  const [userId, setUserId] = useState('');
-  const [displayName, setDisplayName] = useState(''); 
-  const [emailid , setEmailid] = useState('');
-  const inputRef =useRef(null);
-  const[image,setImage]=useState('')
+  const [userName, setUserName] = useState(''); // Username state
+  const [displayName, setDisplayName] = useState('');
+  const [emailid, setEmailid] = useState('');
+  const inputRef = useRef(null);
+  const [image, setImage] = useState('');
+  const navigate = useNavigate();
 
-  const handleImageClick=()=>{
+  // Function to handle image upload
+  const handleImageClick = () => {
     inputRef.current.click();
   };
-  const handleImageChange =(e) =>{
+
+  const handleImageChange = (e) => {
     const file = e.target.files[0];
-    console.log(file);
-    setImage(e.target.files[0]);
+    setImage(file);
   };
 
+  // Logout function
+  const handleLogout = () => {
+    const auth = getAuth();
+    signOut(auth)
+      .then(() => {
+        setUser(null);
+        setUserName('');
+        setDisplayName('');
+        setEmailid('');
+        setImage('');
+        localStorage.removeItem('username');
+        navigate('/login');
+      })
+      .catch((error) => {
+        console.error('Error signing out:', error);
+      });
+  };
+
+  // Save username to Firebase and local storage
+  const saveUserNameToFirebase = (userId, newUsername) => {
+    const database = getDatabase();
+    const userRef = ref(database, `users/${userId}`);
+    update(userRef, { username: newUsername })
+      .then(() => {
+        console.log('Username updated successfully');
+        localStorage.setItem('username', newUsername); // Save to local storage
+      })
+      .catch((error) => {
+        console.error('Error updating username:', error);
+      });
+  };
+
+  // Handle user profile loading from Firebase
   useEffect(() => {
     const auth = getAuth();
-    onAuthStateChanged(auth, (user) => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
         const userId = user.uid;
         const database = getDatabase();
-        const userRef = ref(database, `users/${userId}/private/login credentials`);
+        const userRef = ref(database, `users/${userId}`);
         get(userRef).then((snapshot) => {
           if (snapshot.exists()) {
             const userData = snapshot.val();
-            setUserName(userData.userName);
-            setUserId(userData.userId);
-            setUser(userName);
+            setUserName(userData.username); // Load username
+            setDisplayName(user.displayName);
+            setEmailid(user.email);
+            setUser(user);
+            if (userData.username) {
+              localStorage.setItem('username', userData.username); // Save to localStorage
+            }
           } else {
-            console.log('No user data found', user);
+            console.log('No user data found');
           }
         });
-        setUserName(user.userName);
-        setDisplayName(user.displayName); 
-        setEmailid(user.email);
       } else {
         console.log('No user logged in');
       }
     });
+    return () => unsubscribe();
   }, []);
 
   return (
     <div className='main-body'>
       <div className='inner-box1'>
-          <section className='blured-box'>
-              <Header/>
-                <h1>User Profile</h1>
-                <div id="userProfile" >
-                  <div className="file-input-container" onClick={handleImageClick}>
-                    {/* <img src={by_default_user}/> */}
-                    {image ? (
-                    <img src={URL.createObjectURL(image)} alt=''/>
-                    ) : (
-                    <img src='./by_default_user.jpg' alt=''/>
-                    )}
-                    <input 
-                      type="file" 
-                      ref={inputRef} 
-                      onClick={handleImageChange} 
-                      style={{
-                        display:'none'
-                      }}
-                      />
-                    {/* <button class="file-input-button">Browse</button> */}
-                  </div>
-                  <div className='u-detail'>
-                    <p>Username: {displayName}</p> 
-                    <p>Registered email-id: {emailid}</p>
-                  </div>
-                  <br/>
-                  <br/>
-                  <br/>
-                </div>
-          </section>
-        </div>
+        <section className='blured-box'>
+          <Header />
+          <h1>User Profile</h1>
+          <div id="userProfile">
+            <div className="file-input-container" onClick={handleImageClick}>
+              {image ? (
+                <img className="userimg" src={URL.createObjectURL(image)} alt='' />
+              ) : (
+                <img src='./by_default_user.jpg' alt='' />
+              )}
+              <input 
+                type="file" 
+                ref={inputRef} 
+                onChange={handleImageChange} 
+                style={{ display: 'none' }} 
+              />
+            </div>
+            <div className='u-detail'>
+              <p>Username: {displayName}</p> 
+              <p>Registered email-id: {emailid}</p>
+            </div>
+            <br />
+            <button className="userBtn" onClick={handleLogout}>Logout</button>
+            <br />
+            <br />
+          </div>
+        </section>
+      </div>
     </div>
   );
 }
