@@ -128,7 +128,7 @@ const SignUpForm = () => {
         />
         <input 
           type="password" 
-          placeholder='security_key' 
+          placeholder='Password' 
           onChange={(e) => setPassword(e.target.value)} 
           required
         />
@@ -138,7 +138,7 @@ const SignUpForm = () => {
 
         {successMessage && <p className="success-message">{successMessage}</p>} {/* Success message */}
 
-        <p>Already Registered?👉 <Link to="/login" className='link-des'>Login</Link></p>
+        <p style={{ marginTop: '15px' }}>Already Registered?👉 <Link to="/login" className='link-des'>Login</Link></p>
       </form>
     </div>
   );
