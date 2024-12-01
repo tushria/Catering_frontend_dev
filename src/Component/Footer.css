@@ -1,58 +1,65 @@
 .footer {
-    background-color: #333; /* Change to your theme's background color */
-    color: white; /* Text color */
-    padding: 20px 0;
-    margin-top: 30px;
-  }
-  
-  .footer-col {
-    margin-bottom: 20px;
-  }
-  
-  .footer-title {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #FFD700; /* Highlight color for section titles */
-    margin-bottom: 10px;
-  }
-  
-  .footer-links {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .footer-links li {
-    margin-bottom: 10px;
-  }
-  
-  .footer-links a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  .footer-links a:hover {
-    text-decoration: underline;
-  }
-  
-  .footer-social-icons a {
-    color: white;
-    font-size: 1.5rem;
-    margin-right: 15px;
-  }
-  
-  .footer-social-icons a:hover {
-    color: #FFD700; /* Hover color for social media icons */
-  }
-  
-  .footer-bottom {
-    text-align: center;
-    border-top: 1px solid #555;
-    padding-top: 10px;
-    margin-top: 10px;
-  }
-  
-  .footer-bottom p {
-    margin: 0;
-    color: #ccc; /* Text color for copyright info */
-  }
+  background-color: #333; /* Change to your theme's background color */
+  color: white; /* Text color */
+  padding: 20px 0;
+  margin-top: 30px;
+  border-radius: 20px;
+}
+
+.footer-col {
+  margin-bottom: 20px;
+}
+
+.footer-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #FFD700; /* Highlight color for section titles */
+  margin-bottom: 10px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-social-icons a {
+  color: white;
+  font-size: 1.5rem;
+  margin-right: 15px;
+}
+
+.footer-social-icons a:hover {
+  color: #FFD700; 
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #555;
+  padding-top: 10px;
+  margin-top: 10px;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: #ccc; 
+}
+.custom-link {
+  text-decoration: none;
+  color: rgb(117, 212, 244);
+  font-weight: bold;
+}
+
   
