@@ -264,8 +264,6 @@
     border:2px solid rgb(0, 0, 0);
 }
   
-
-
 .marquee-container {
     width: 85%;
     overflow: hidden;
@@ -275,7 +273,7 @@
     box-sizing: border-box;
     display: flex;
     position: absolute;
-    top: 16%;
+    top: 13%;
 }
 
 .marquee-content {

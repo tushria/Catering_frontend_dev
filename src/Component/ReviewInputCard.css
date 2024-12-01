@@ -1,173 +1,53 @@
-/* .review-input-card {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-  }
-  
-  .review-input-card .card {
-    background-color: #ffffff86;
-    border-radius: 10px;
-  }
-  
-  .review-input-card .card-title {
-    font-size: 1.5rem;
-    color: #333;
-  }
-  
-  .review-input-card .form-control {
-    border: 1px solid #ced4da;
-    border-radius: 5px;
-  }
-
-  .review-input-card .btn:hover {
-    background-color: #000000ce;
-    border: black;
-  }
-  
-  .alert {
-    max-width: 600px;
-    margin: 20px auto;
-    font-size: 1rem;
-  }
-   */
-   /* ReviewInputCard.css */
-
-/* General styling for the card containing review input */
 .review-input-card {
-  max-width: 600px;
-  margin: 20px auto;
   padding: 20px;
+  margin-left: 11%;
 }
 
-/* Card for the review input form */
-.review-input-card .card {
-  border: 1px solid #ddd;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-}
-
-/* Styling the review submit button */
-.review-input-card .btn-primary {
-  width: 100%;
-}
-
-/* Spacing between the form and review list */
-.review-input-card h3 {
-  margin-top: 40px;
-  font-size: 1.5rem;
-  color: #333;
-  text-align: center;
-}
-
-/* Individual review items */
-.review-item {
-  margin-bottom: 20px;
-}
-
-/* 
-.review-item .card {
-  border-radius: 8px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.192);
-  transition: box-shadow 0.3s ease;
-}
-
-.review-item .card:hover {
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-.review-item .card-body {
-  padding: 15px;
-  background-color: #fafafaa8;
-  border: 1px solid #ddd;
+.card {
+  border: 1px;
   border-radius: 8px;
 }
 
 
-.review-item .card-title {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: #555;
-}
-
-.review-item .card-text {
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #666;
-  margin-bottom: 10px;
-}
-
-.review-item .text-muted {
-  font-size: 0.85rem;
-  color: #999;
-}
-
-
-.review-input-card .alert {
-  margin-bottom: 20px;
-} */
-
-
-/* ReviewInputCard.css */
-
-/* General styling for the card containing review input */
-.review-input-card {
-  max-width: 500px; /* Decreased width */
-  margin: 20px auto;
-  padding: 20px;
-}
-
-/* Card for the review input form */
-.review-input-card .card {
-  border: 1px solid #ddd;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-}
-
-/* Styling the review submit button */
-.review-input-card .btn-primary {
-  width: 100%;
-}
 .card-body {
   flex: 1 1 auto;
   padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
   color: var(--bs-card-color);
-  background-color: #a0eba0;
+  background-color: #00000049;
+  border: none;
 }
-/* Spacing between the form and review list */
+
 .review-input-card h3 {
   margin-top: 40px;
-  font-size: 1.5rem;
-  color: #333;
+  font-size: 3rem;
+  color: #ffbf47;
   text-align: center;
 }
 
-/* Review list container */
 .review-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns */
-  gap: 20px; /* Spacing between cards */
-  margin-top: 20px; /* Space between header and review grid */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3px;
+  margin-top: 20px;
+  justify-content: space-evenly;
+  width: 90%;
 }
 
-/* Individual review items */
 .review-item {
-  margin-bottom: 20px; /* Added margin for spacing */
+  margin-bottom: 20px;
+  width: 20vw;
 }
 
-/* Card styling for each review */
 .review-item .card {
   border-radius: 8px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease;
 }
 
-/* Hover effect on review card */
 .review-item .card:hover {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Review card body styling */
 .review-item .card-body {
   padding: 15px;
   background-color: #fafafa;
@@ -175,7 +55,6 @@
   border-radius: 8px;
 }
 
-/* Review title (username) styling */
 .review-item .card-title {
   font-size: 1.2rem;
   font-weight: bold;
@@ -183,7 +62,6 @@
   color: #555;
 }
 
-/* Review text styling */
 .review-item .card-text {
   font-size: 1rem;
   line-height: 1.5;
@@ -191,13 +69,16 @@
   margin-bottom: 10px;
 }
 
-/* Styling for the review timestamp */
 .review-item .text-muted {
   font-size: 0.85rem;
   color: #999;
 }
 
-/* Style the alert message */
 .review-input-card .alert {
   margin-bottom: 20px;
+}
+
+.mt-4{
+  width: 60%;
+  margin-left: 13%;
 }
