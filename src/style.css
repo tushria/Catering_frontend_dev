@@ -1,4 +1,4 @@
-*{
+/* *{
     margin: 0;
 }
 ::-webkit-scrollbar-track{
@@ -12,7 +12,35 @@
     border-radius: 1rem;
     background-clip: content-box;
     
+} */
+
+/* Ensure no margin is applied to any element */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Optional: Helps maintain layout consistency */
 }
+
+/* Apply a background for the body */
+html, body {
+    height: 100%; /* Ensures the background covers the entire screen */
+    background: linear-gradient(to bottom, #000000, #434343); /* Gradient from black to dark grey */
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.728); /* Dark background for the track */
+    width: 10px; /* Set the width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(95, 158, 160, 0.475); /* Light teal color for the thumb */
+    border: 0.5rem solid transparent; /* Adds spacing around the thumb */
+    background-clip: content-box; /* Ensures background is inside the thumb */
+    border-radius: 1rem; /* Round corners for the thumb */
+    background-clip: content-box; /* Ensures the background is clipped to the thumb */
+}
+
 /* custime mouse */
 .main {
     height: 20px;
@@ -182,6 +210,11 @@
     padding: 3px 32px;
     margin-left: 20%;   
 }
+
+
+
+
+
 /* home page */
 .main-body{
     background-color: rgb(46, 46, 46); 
@@ -273,7 +306,7 @@
     box-sizing: border-box;
     display: flex;
     position: absolute;
-    top: 13%;
+    top: 17%;
 }
 
 .marquee-content {
@@ -461,6 +494,20 @@
 .cont-lbl7{
     padding: 20px 5px;
 } */
+/* .cont-main-box {
+    background-image: url('../src/assest/homebg.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 50px;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+} */
+
 .cont-main-box {
     background-image: url('../src/assest/homebg.jpg');
     background-size: cover;
@@ -473,7 +520,34 @@
     display: flex;
     flex-direction: column;
     align-items: center; /* Center content horizontally */
+    justify-content: center; /* Optionally center vertically */
 }
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .cont-main-box {
+        padding: 40px;
+    }
+}
+
+@media (max-width: 992px) {
+    .cont-main-box {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cont-main-box {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .cont-main-box {
+        padding: 15px;
+    }
+}
+
 
 .inner-blurred-contactus-box {
     display: flex;
@@ -1092,5 +1166,91 @@
     }
     .buttons-container{
         width: 47%;
+    }
+}
+
+
+/* responsive */
+@media (max-width: 768px) {
+
+    .signup-container,
+    .login-container {
+        padding: 20px;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .signup-form,
+    .login-form {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .acct-btn {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .account-check {
+        padding: 15px;
+    }
+
+    .right-img {
+        position: static;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .img2 {
+        width: 100%;
+        height: auto;
+    }
+
+    .main-cont {
+        flex-direction: column;
+        /* text-align: center; */
+        margin: 5% 5%;
+        height: 46vh;
+    }
+
+    .buttons-container {
+        width: 90%;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .button-arounder {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .marquee-container {
+        /* width: 100%; */
+        top: 10%;
+    }
+
+    .second-sec h1,
+    .third-sec h1,
+    .fourth-sec h1 {
+        font-size: 2rem;
+        padding: 10px;
+    }
+
+    .fourth-detail {
+        grid-template-columns: 1fr;
+        font-size: 1rem;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .fourth-detail img {
+        /* width: 60%; */
+        height: auto;
+    }
+
+    .text-box {
+        text-align: center;
+        padding: 10px;
     }
 }
