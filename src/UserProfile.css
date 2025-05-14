@@ -1,4 +1,4 @@
-#userProfile {
+/* #userProfile {
     padding: 20px;
     height: 70vh;
     width: 80%;
@@ -66,4 +66,108 @@
 .userBtn:hover {
     padding: 7px 38px;
     background-color: #000000;
+} */
+
+#userProfile {
+    padding: 20px;
+    height: auto;
+    width: 80%;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.153);
+}
+
+.userpro-h {
+    margin: 0px 16px 25px;
+    color: white;
+    text-align: center;
+}
+
+.outter-box-userPro {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.file-input-container {
+    width: auto;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.userimg {
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #000000;
+}
+
+.u-detail {
+    width: 70%;
+    color: white;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.user-btn-logout {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 10px;
+}
+
+.userBtn {
+    position: relative;
+    color: white;
+    font-size: 16px;
+    padding: 7px 38px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(0, 0, 0);
+}
+
+.userBtn:hover {
+    background-color: #000000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .outter-box-userPro {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .u-detail {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .user-btn-logout {
+        align-items: center;
+    }
+
+    .userimg {
+        width: 8rem;
+        height: 8rem;
+    }
+
+    .userBtn {
+        padding: 6px 28px;
+        font-size: 14px;
+    }
 }
