@@ -554,7 +554,7 @@ html, body {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    /* width: 67rem; */
+    width: 67rem;
     margin: 0 auto;
 }
 
@@ -658,7 +658,7 @@ html, body {
 
 
 /*-------------------birthday page------------------------*/
-.main.birth{
+/* .main.birth{
         height: auto;
         width: 100%;
         background-color: white;
@@ -731,7 +731,7 @@ html, body {
 }
 
 .click-me-b button {
-    border: none; /* Or you can style it further */
+    border: none; 
     padding: 10px 20px;
     background-color: lightblue;
     color: black;
@@ -742,12 +742,163 @@ html, body {
 .click-me-b button:hover {
     background-color: darkblue;
     color: white;
+} */
+
+.main.birth {
+    height: auto;
+    width: 100%;
+    background-color: white;
+    border-radius: 50%;
+    position: relative;
+}
+
+.b-details {
+    padding: 1% 5%;
+    color: whitesmoke;
+}
+
+.b-heading {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+.b-heading h1 {
+    font-size: 3rem;
+    font-family: "Dancing Script", cursive;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 5%;
+}
+
+.b-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2%;
+    background-color: rgba(255, 192, 203, 0.651);
+    padding: 2% 0 5%;
+}
+
+.birthday-cont h1 {
+    font-size: 3rem;
+}
+
+.b-img img {
+    width: 80%;
+    max-width: 400px;
+    height: auto;
+    border: 10px solid white;
+    margin: 0 auto;
+    display: block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.457);
+}
+
+.birthday-cont {
+    width: 100%;
+    font-size: 1.1rem;
+    letter-spacing: 0.1rem;
+    line-height: 1.8;
+    padding: 1rem;
+}
+
+.food-b {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    min-height: 300px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    color: black;
+    gap: 20px;
+}
+
+.food-img-b img,
+.food-img1-b img,
+.food-img3-b img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+}
+
+.click-me-b button {
+    border: none; 
+    padding: 10px 20px;
+    background-color: lightblue;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.click-me-b button:hover {
+    background-color: darkblue;
+    color: white;
+}
+
+/* 🔽 Responsive Media Queries */
+
+@media screen and (max-width: 1024px) {
+    .b-intro {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .b-img img {
+        margin: 0 auto;
+    }
+
+    .birthday-cont h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .b-heading h1 {
+        font-size: 2.5rem;
+    }
+
+    .birthday-cont {
+        font-size: 1rem;
+    }
+
+    .food-b {
+        flex-direction: column;
+    }
+
+    .food-img-b img,
+    .food-img1-b img,
+    .food-img3-b img {
+        max-width: 80%;
+    }
+
+    .click-me-b button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .b-heading h1 {
+        font-size: 2rem;
+    }
+
+    .birthday-cont h1 {
+        font-size: 2rem;
+    }
+
+    .b-details {
+        padding: 2% 3%;
+    }
 }
 
 
-
 /* --------------------wedding page------------------------ */
-.main.wed{
+/* .main.wed{
     height: auto;
     width: 100%;
     background-color: white;
@@ -829,7 +980,138 @@ html, body {
 }
 .click-me-w button{
     border: white;
+} */
+ .main.wed {
+    height: auto;
+    width: 100%;
+    background-color: white;
+    border-radius: 50%;
+    position: relative;
 }
+
+.food-details {
+    width: 100%;
+    padding: 5% 2%;
+}
+
+.food-details h1 {
+    text-align: center;
+    padding: 2% 5%;
+    font-size: 3rem;
+    font-family: "Dancing Script", cursive;
+}
+
+.food {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: white;
+    border-radius: 20px;
+    padding: 2%;
+    gap: 20px;
+    min-height: 300px;
+}
+
+.food h4 {
+    text-align: center;
+    color: black;
+}
+
+.food .one {
+    font-weight: 300;
+}
+
+.food-img:hover,
+.food-img1:hover,
+.food-img3:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+
+.food img {
+    display: block;
+    max-width: 95%;
+    height: auto;
+    padding: 3%;
+    object-fit: contain;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+
+.image-of-wed {
+    width: 100%;
+    max-width: 20rem;
+}
+
+.food-img img,
+.food-img1 img,
+.food-img3 img {
+    height: auto;
+    object-fit: cover;
+    max-width: 300px;
+    max-height: 300px;
+    border-radius: 20px;
+}
+
+/* Optional styling if there's a button container */
+.click-me-w button {
+    border: none;
+    padding: 10px 20px;
+    background-color: lightcoral;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.3s ease-in-out;
+}
+
+.click-me-w button:hover {
+    background-color: darkred;
+}
+
+/* 🔽 Responsive Media Queries */
+
+@media screen and (max-width: 1024px) {
+    .food-details h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .food {
+        flex-direction: column;
+    }
+
+    .food-details h1 {
+        font-size: 2.2rem;
+        padding: 2% 3%;
+    }
+
+    .food-img img,
+    .food-img1 img,
+    .food-img3 img {
+        max-width: 80%;
+        max-height: 250px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .food-details h1 {
+        font-size: 1.8rem;
+    }
+
+    .click-me-w button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    .image-of-wed {
+        width: 100%;
+    }
+}
+
 
 /* -----------------------------Meeting page-------------------------- */
 .main.meet{

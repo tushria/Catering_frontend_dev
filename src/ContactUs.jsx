@@ -54,10 +54,10 @@ const ContactUs = () => {
   return (
     <div>
       <div className='cont-main-box'>
-        <section className='blured-box'>
+        {/* <section className='blured-box'> */}
           
           <Header />
-          <div className="inner-blurred-contactus-box">
+          {/* <div className="inner-blurred-contactus-box"> */}
             <h1 id='cont-box2-heading1'>Get in Touch</h1>
             <h2 id='cont-box2-heading2'>Your Journey to an Unforgettable Gathering Begins Here</h2>
            
@@ -92,9 +92,9 @@ const ContactUs = () => {
               </form>
             </div>
           </div>
-        </section>
+        {/* </section> */}
       </div>
-    </div>
+    // </div>~
   );
 }
 
