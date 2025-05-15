@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // Import navigate
 import Header from './Component/Header';
 import './style.css';
+import '.'
 import { getDatabase, ref, set } from 'firebase/database'; // Import Firebase functions
 
 const ContactUs = () => {
@@ -59,65 +60,36 @@ const ContactUs = () => {
           <div className="inner-blurred-contactus-box">
             <h1 id='cont-box2-heading1'>Get in Touch</h1>
             <h2 id='cont-box2-heading2'>Your Journey to an Unforgettable Gathering Begins Here</h2>
-            {/* New Contact Form Box */}
+           
             <div className="contact-form-box">
-              <form className='contactus' onSubmit={handleSubmit}>
-                <div className="cont-lbl1">
-                  <label>Name</label>
-                  <input 
-                    type="text" 
-                    placeholder='Enter your Name' 
-                    value={name} 
-                    onChange={(e) => setName(e.target.value)} 
-                    required 
-                  />
+              <form
+                className="contactus"
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  document.querySelector('.confirmation-message').style.display = 'block';
+                }}
+              >
+                <div>
+                  <label htmlFor="name">Name</label>
+                  <input type="text" id="name" placeholder="Enter your name" required />
                 </div>
-                <div className="cont-lbl2">
-                  <label>Phone Number</label>
-                  <input 
-                    type="text" 
-                    placeholder='Phone number' 
-                    value={phoneNumber} 
-                    onChange={(e) => setPhoneNumber(e.target.value)} 
-                    required 
-                  />
+
+                <div>
+                  <label htmlFor="email">Email</label>
+                  <input type="email" id="email" placeholder="Enter your email" required />
                 </div>
-                <div className="cont-lbl2">
-                  <label>Event Location</label>
-                  <input 
-                    type="text" 
-                    placeholder='Event Location' 
-                    value={eventLocation} 
-                    onChange={(e) => setEventLocation(e.target.value)} 
-                    required 
-                  />
+
+                <div>
+                  <label htmlFor="message">Message</label>
+                  <textarea id="message" rows="4" placeholder="Your message" required></textarea>
                 </div>
-                <div className="cont-lbl2">
-                  <label>Number of Guests</label>
-                  <input 
-                    type="number" 
-                    placeholder='Number of Guests' 
-                    value={numberOfGuests} 
-                    onChange={(e) => setNumberOfGuests(e.target.value)} 
-                    required 
-                  />
+
+                <button type="submit">Send Message</button>
+
+                <div className="confirmation-message" style={{ display: 'none' }}>
+                  Your message has been sent!
                 </div>
-                <div className="cont-lbl2">
-                  <label>Event Details</label>
-                  <textarea 
-                    placeholder='Event Details' 
-                    value={eventDetails} 
-                    onChange={(e) => setEventDetails(e.target.value)} 
-                    required 
-                  />
-                </div>
-                <button type='submit'>Done</button>
               </form>
-              {confirmationMessage && (
-                <div className="confirmation-message">
-                  {confirmationMessage}
-                </div>
-              )}
             </div>
           </div>
         </section>
@@ -127,4 +99,3 @@ const ContactUs = () => {
 }
 
 export default ContactUs;
-

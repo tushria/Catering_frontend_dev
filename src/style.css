@@ -554,7 +554,7 @@ html, body {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    width: 67rem;
+    /* width: 67rem; */
     margin: 0 auto;
 }
 
@@ -1254,3 +1254,90 @@ html, body {
         padding: 10px;
     }
 }
+
+
+
+@media screen and (max-width: 412px) {
+    /* Body and Container */
+    body {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+
+    .signup-container, .login-container {
+        padding: 10px; /* Reduce padding on small screens */
+    }
+
+    .signup-form, .login-form {
+        width: 90%; /* Make forms take up more width */
+        padding: 15px;
+        margin-top: 15rem;
+    }
+
+    .signup-form input, .login-form input {
+        padding: 8px; /* Adjust input padding */
+        font-size: 14px; /* Adjust font size for inputs */
+    }
+
+    .signup-form button, .login-form button {
+        padding: 10px; /* Increase padding for buttons */
+        font-size: 14px; /* Adjust button text size */
+    }
+
+    .link-des {
+        font-size: 12px; /* Adjust link text size */
+    }
+
+    .main-body, .inner-box1 {
+        padding: 20px; /* Reduce padding on small screens */
+    }
+
+    .main-cont {
+        flex-direction: column; /* Stack elements vertically on small screens */
+        align-items: center; /* Center the content */
+        text-align: center; /* Center the text */
+    }
+
+    .left-main h1 {
+        font-size: 1.5rem; /* Adjust heading size */
+    }
+
+    .right-img {
+        width: 50%; /* Adjust image size */
+        left: 25%; /* Adjust position */
+        top: 5%;
+    }
+
+    .img2 {
+        width: 15rem; /* Adjust image size */
+        height: 15rem; /* Adjust image size */
+    }
+
+    .buttons-container {
+        width: 100%; /* Make buttons container take full width */
+        flex-direction: column; /* Stack buttons vertically */
+    }
+
+    .button-arounder {
+        width: 100%; /* Make button full width */
+        padding: 0.8em 0; /* Adjust padding for better appearance */
+    }
+
+    .marquee-container {
+        width: 100%; /* Make marquee full width */
+        margin-top: 20px; /* Adjust space above marquee */
+    }
+
+    .marquee-content {
+        font-size: 1.1rem; /* Adjust font size for marquee */
+    }
+
+    .account-check {
+        padding: 15px; /* Adjust padding */
+    }
+
+    .acct-btn {
+        padding: 3px 20px; /* Adjust button padding */
+        margin-left: 10%; /* Adjust margin */
+    }
+}
+
