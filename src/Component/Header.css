@@ -1,4 +1,4 @@
-/* /* .nav-bar {
+.nav-bar {
     margin-bottom: 5%;
     display: flex;
     margin-left: 20%;
@@ -68,7 +68,7 @@ ul.menu{
         padding: 5px 15px;
         font-weight: 700;
     }
-} */
+}
 
 
 
@@ -246,7 +246,7 @@ body {
   }
 } */ 
 
-
+/* 
 .nav-bar {
   display: flex;
   justify-content: center;
@@ -264,7 +264,7 @@ body {
   max-width: 100%;
 }
 
-/* Navigation menu */
+
 .nav-bar ul {
   list-style: none;
   display: flex;
@@ -298,7 +298,7 @@ body {
 
   .nav-bar ul {
     gap: 10px;
-    flex-wrap: wrap; /* maintains horizontal but wraps if needed */
+    flex-wrap: wrap; 
   }
 
   .nav-bar ul li {
@@ -316,4 +316,4 @@ body {
     padding: 4px 8px;
     font-size: 0.85rem;
   }
-}
+} */
